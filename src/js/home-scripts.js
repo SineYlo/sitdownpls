@@ -1,5 +1,5 @@
-// |=============== CONNECTING AN EXTERNAL MODULE |  ===============>
-// import module_name from 'module-name';
+// |=============== CONNECTING AN EXTERNAL MODULE | FOCUS-VISIBLE ===============>
+import 'focus-visible';
 
 // |=============== CONNECTING THE SCRIPT |  ===============>
 // |=============== CONNECTING THE SCRIPT |  ===============>

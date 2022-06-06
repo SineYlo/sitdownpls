@@ -1,153 +1,79 @@
 :root {
   // |=============== CONTAINER ===============>
   // |CM| Width and indents of the base container
-  --content-width: 0;
-  --container-offset: 0;
+  --content-width: 1280px;
+  --container-offset: 14px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-  // |CM| Width and indents of the fluid container
-  --content-fluid-width: 0;
-  --container-fluid-offset: 0;
-  --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-fluid-offset) * 2));
 
   // |=============== FONT-FAMILY ===============>
   // |CM| Main font family
-  --first-font-family: null;
+  --first-font-family: "Open Sans", system-ui;
   // |CM| Additional font families
-  --second-font-family: null;
-  --third-font-family: null;
-  --fourth-font-family: null;
+  --second-font-family: "Playfair Display", "Times New Roman", "Times", serif;
 
   // |=============== COLOR ===============>
-  // |CM| Change favorite color (Color name - )
-  --hue-color: null;
+  // |CM| Change favorite color (Amethyst - 270)
+  --hue-color: 270;
   // |CM| HSL color mode
-  --first-color-mode: hsl(var(--hue-color));
-  --second-color-mode: hsl(var(--hue-color));
-  --third-color-mode: hsl(var(--hue-color));
-  --fourth-color-mode: hsl(var(--hue-color));
-  --fifth-color-mode: hsl(var(--hue-color));
-  --sixth-color-mode: hsl(var(--hue-color));
-  --seventh-color-mode: hsl(var(--hue-color));
-  --eighth-color-mode: hsl(var(--hue-color));
-  --ninth-color-mode: hsl(var(--hue-color));
-  --tenth-color-mode: hsl(var(--hue-color));
+  --first-color-mode: hsl(var(--hue-color) 83% 65%);
+  --second-color-mode: hsl(var(--hue-color) 92% 79%);
+  --third-color-mode: hsl(var(--hue-color) 54% 44%);
+  --fourth-color-mode: hsl(var(--hue-color) 100% 97%);
+  --fifth-color-mode: hsl(var(--hue-color) 100% 91%);
   // |CM| Other colors
-  --first-other-color: null;
-  --second-other-color: null;
-  --third-other-color: null;
-  --fourth-other-color: null;
-  --fifth-other-color: null;
-  --sixth-other-color: null;
-  --seventh-other-color: null;
-  --eighth-other-color: null;
-  --ninth-other-color: null;
-  --tenth-other-color: null;
-  --eleventh-other-color: null;
-  --twelfth-other-color: null;
-  --thirteenth-other-color: null;
-  --fourteenth-other-color: null;
-  --fifteenth-other-color: null;
-  --sixteenth-other-color: null;
-  --seventeenth-other-color: null;
-  --eighteenth-other-color: null;
-  --nineteenth-other-color: null;
-  --twentieth-other-color: null;
-  --twenty-first-other-color: null;
-  --twenty-second-other-color: null;
-  --twenty-third-other-color: null;
-  --twenty-fourth-other-color: null;
-  --twenty-fifth-other-color: null;
-  --twenty-sixth-other-color: null;
-  --twenty-seventh-other-color: null;
-  --twenty-eighth-other-color: null;
-  --twenty-ninth-other-color: null;
-  --thirtieth-other-color: null;
+  --first-other-color: hsl(25 100% 59%);
+  --second-other-color: hsl(36 100% 68%);
+  --third-other-color: hsl(14 86% 39%);
+  --fourth-other-color: hsl(356 100% 71%);
+  --fifth-other-color: hsl(83 78% 66%);
+  --sixth-other-color: hsl(39 48% 68%);
+  --seventh-other-color: hsl(0 0% 100%);
+  --eighth-other-color: hsl(0 0% 97%);
+  --ninth-other-color: hsl(0 0% 92%);
+  --tenth-other-color: hsl(0 0% 60%);
+  --eleventh-other-color: hsl(0 0% 40%);
+  --twelfth-other-color: hsl(0 0% 20%);
+  --thirteenth-other-color: hsl(0 0% 0% / 0.2);
+  --fourteenth-other-color: hsl(108 100% 91%);
+  --fifteenth-other-color: hsl(47 100% 91%);
 
   // |=============== FONT-WEIGHT ===============>
   // |CM| Different font weight options
-  --first-font-weight: null;
-  --second-font-weight: null;
-  --third-font-weight: null;
-  --fourth-font-weight: null;
-  --fifth-font-weight: null;
-  --sixth-font-weight: null;
-  --seventh-font-weight: null;
-  --eighth-font-weight: null;
-  --ninth-font-weight: null;
-  --tenth-font-weight: null;
+  --first-font-weight: 600;
+  --second-font-weight: 700;
+  --third-font-weight: 900;
 
   // |=============== FONT-SIZE ===============>
   // |CM| Base font-size ( 0.5rem = 8px, 1rem = 16px, 1.5rem = 24px ...)
-  --text-size-base: null;
+  --text-size-base: 16px;
   // |CM| Different font size options
-  --text-size-min-tiny: calc(var(--text-size-base) - null);
-  --text-size-min-small: calc(var(--text-size-base) - null);
-  --text-size-min-medium: calc(var(--text-size-base) - null);
-  --text-size-min-big: calc(var(--text-size-base) - null);
-  --text-size-min-large: calc(var(--text-size-base) - null);
-  --text-size-min-huge: calc(var(--text-size-base) - null);
-  --text-size-tiny: calc(var(--text-size-base) - null);
-  --text-size-small: calc(var(--text-size-base) - null);
-  --text-size-medium: calc(var(--text-size-base) + null);
-  --text-size-big: calc(var(--text-size-base) + null);
-  --text-size-large: calc(var(--text-size-base) + null);
-  --text-size-huge: calc(var(--text-size-base) + null);
-  --text-size-max-tiny: calc(var(--text-size-base) + null);
-  --text-size-max-small: calc(var(--text-size-base) + null);
-  --text-size-max-medium: calc(var(--text-size-base) + null);
-  --text-size-max-big: calc(var(--text-size-base) + null);
-  --text-size-max-large: calc(var(--text-size-base) + null);
-  --text-size-max-huge: calc(var(--text-size-base) + null);
-
-  // |=============== LINE-HEIGHT ===============>
-  // |CM| Various line spacing options
-  --first-lh: null;
-  --second-lh: null;
-  --third-lh: null;
-  --fourth-lh: null;
-  --fifth-lh: null;
-  --sixth-lh: null;
-  --seventh-lh: null;
-  --eighth-lh: null;
-  --ninth-lh: null;
-  --tenth-lh: null;
+  --text-size-min-medium: calc(var(--text-size-base) - 11px);
+  --text-size-min-big: calc(var(--text-size-base) - 9px);
+  --text-size-min-large: calc(var(--text-size-base) - 7px);
+  --text-size-min-huge: calc(var(--text-size-base) - 6px);
+  --text-size-tiny: calc(var(--text-size-base) - 4px);
+  --text-size-small: calc(var(--text-size-base) - 2px);
+  --text-size-medium: calc(var(--text-size-base) + 2px);
+  --text-size-big: calc(var(--text-size-base) + 4px);
+  --text-size-large: calc(var(--text-size-base) + 8px);
+  --text-size-huge: calc(var(--text-size-base) + 16px);
+  --text-size-max-tiny: calc(var(--text-size-base) + 20px);
+  --text-size-max-small: calc(var(--text-size-base) + 32px);
 
   // |=============== BORDER-RADIUS ===============>
   // |CM| Various options for the border radius
-  --first-br: null;
-  --second-br: null;
-  --third-br: null;
-  --fourth-br: null;
-  --fifth-br: null;
-  --sixth-br: null;
-  --seventh-br: null;
-  --eighth-br: null;
-  --ninth-br: null;
-  --tenth-br: null;
+  --first-br: 2px;
+  --second-br: 10px;
+  --third-br: 50%;
 
   // |=============== GAP ===============>
   // |CM| Different indentation options between elements
-  --first-gap: null;
-  --second-gap: null;
-  --third-gap: null;
-  --fourth-gap: null;
-  --fifth-gap: null;
-  --sixth-gap: null;
-  --seventh-gap: null;
-  --eighth-gap: null;
-  --ninth-gap: null;
-  --tenth-gap: null;
+  --first-gap: 32px;
+  --second-gap: 16px;
 
   // |=============== TRANSITION ===============>
   // |CM| Duration of effects (most effective 0.2 to 0.4s)
   --fast-transition-duration: 0.2s;
   --medium-transition-duration: 0.3s;
   --slow-transition-duration: 0.4s;
-
-  // |=============== ANIMATIONS ===============>
-  // |CM| Duration of animations (most effective 0.2 to 0.5s)
-  --fast-animation-duration: 0.2s;
-  --medium-animation-duration: 0.3s;
-  --slow-animation-duration: 0.4s;
-  --very-slow-animation-duration: 0.5s;
 }

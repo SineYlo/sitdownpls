@@ -1,2 +1,3 @@
 // |=============== CONNECTING FONTS ===============>
-// @include add-font($name-font-family, $path-to-font, $fw, $fs);
+@include add-font("Open Sans", "open-sans/open-sans-regular", 400, normal);
+@include add-font("Open Sans", "open-sans/open-sans-semibold", 600, normal);

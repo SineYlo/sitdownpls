@@ -17,7 +17,6 @@ const config = {
     root: [
       `${sourceFolder}/site.webmanifest`,
       `${sourceFolder}/favicon.svg`,
-      `${sourceFolder}/mask-icon.svg`,
     ],
     htmlHome: `${sourceFolder}/index.html`,
     htmlPages: `${sourceFolder}/html/pages/**/*.html`,
