@@ -1,0 +1,131 @@
+.choosing-region {
+  @include f-ai-center;
+
+  .choices {
+    z-index: 0;
+
+    &[data-type*="select-one"] {
+      overflow: visible;
+
+      &::before {
+        @include focus-background-fill(-2px, -2px, 0, -2px, var(--fifth-color-mode));
+
+        content: "";
+      }
+
+      &::after {
+        display: none;
+      }
+
+      .choices__inner {
+        padding-bottom: 0;
+      }
+
+      &.focus-visible {
+        &::before {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+
+        .choices__inner {
+          color: var(--third-color-mode);
+        }
+      }
+
+      &.is-open {
+        .choices__inner {
+          &::before {
+            transform: rotateX(180deg);
+          }
+        }
+      }
+    }
+
+    &__inner {
+      border: 0;
+      border-radius: 0;
+      padding: 0 19px 0 0;
+      min-height: auto;
+      color: var(--first-color-mode);
+      background-color: transparent;
+      transition: color var(--medium-transition-duration) ease-in-out;
+
+      &::before {
+        --height: 8px;
+
+        content: "";
+        position: absolute;
+        right: 0;
+        top: calc(50% - calc(var(--height) / 2) + 2px);
+        display: inline-block;
+        width: 12px;
+        height: var(--height);
+        background-image: url("../img/svg/icon-down-arrow.svg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: transform var(--medium-transition-duration) ease-in-out;
+      }
+
+      @include hover {
+        &:hover {
+          color: var(--second-color-mode);
+        }
+      }
+
+      &:active {
+        color: var(--third-color-mode);
+      }
+    }
+
+    &__list {
+      &--dropdown,
+      &[aria-expanded] {
+        left: -4px;
+        top: calc(100% + 8px);
+        margin-top: 0;
+        border: 2px solid var(--eighth-other-color);
+        border-radius: 0;
+        width: 84px;
+        opacity: 0;
+        transition: opacity var(--medium-transition-duration) ease-in-out;
+
+        .choices__list {
+          padding: 14px;
+          max-height: 140px;
+        }
+
+        .choices__item {
+          padding: 0;
+          line-height: lh-numeric(14px, 18px);
+
+          &:not(:last-child) {
+            margin-bottom: 11px;
+          }
+
+          &.is-highlighted {
+            background-color: var(--fourth-color-mode);
+          }
+        }
+
+        &.is-active {
+          opacity: 1;
+        }
+      }
+
+      &--single {
+        padding: 0;
+        font-size: var(--text-size-base);
+        line-height: lh-numeric(16px, 19px);
+      }
+    }
+  }
+
+  &__text {
+    @include label-dereset;
+
+    margin-right: 4px;
+    line-height: lh-numeric(16px, 19px);
+  }
+}

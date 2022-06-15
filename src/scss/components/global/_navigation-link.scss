@@ -1,0 +1,40 @@
+.navigation-link {
+  display: inline-block;
+  outline: none;
+  font-size: var(--text-size-small);
+  line-height: lh-numeric(14px, 20px);
+  text-decoration: none;
+  color: var(--tenth-other-color);
+  background-color: transparent;
+  transition: color var(--medium-transition-duration) ease-in-out;
+
+  &::before {
+    @include focus-background-fill(-10px, -10px, -1px, -1px, var(--fifth-color-mode));
+
+    content: "";
+  }
+
+  &.focus-visible {
+    color: var(--third-color-mode);
+
+    &::before {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  @include hover {
+    &:hover {
+      &:not(.focus-visible) {
+        color: var(--first-color-mode);
+      }
+    }
+  }
+
+  &:active {
+    &:not(.focus-visible) {
+      color: var(--third-color-mode);
+    }
+  }
+}

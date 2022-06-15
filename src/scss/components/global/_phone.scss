@@ -1,0 +1,45 @@
+.phone {
+  @include f-i-center;
+
+  outline: none;
+  font-size: var(--text-size-small);
+  line-height: 1;
+  text-decoration: none;
+  color: var(--first-other-color);
+  background-color: transparent;
+  transition: color var(--medium-transition-duration) ease-in-out;
+
+  &::before {
+    @include focus-background-fill(0, 0, 0, 0, var(--fifteenth-other-color));
+
+    content: "";
+  }
+
+  &.focus-visible {
+    &::before {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  @include hover {
+    &:hover {
+      &:not(.focus-visible) {
+        color: var(--second-other-color);
+      }
+    }
+  }
+
+  &:active {
+    &:not(.focus-visible) {
+      color: var(--third-other-color);
+    }
+  }
+
+  &__icon {
+    @include svg-dereset;
+
+    fill: currentColor;
+  }
+}

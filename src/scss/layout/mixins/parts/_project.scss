@@ -1,0 +1,100 @@
+@mixin zero-index {
+  position: relative;
+  z-index: 0;
+}
+
+@mixin button-disabled {
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+}
+
+@mixin focus-background-fill($offset-left, $offset-right, $offset-top, $offset-bottom, $background-color) {
+  position: absolute;
+  left: #{$offset-left};
+  right: #{$offset-right};
+  top: #{$offset-top};
+  bottom: #{$offset-bottom};
+  z-index: -1;
+  background-color: #{$background-color};
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition-property: opacity, visibility, transform;
+  transition-duration: var(--medium-transition-duration);
+  transition-timing-function: ease-in-out;
+}
+
+@mixin button-arrow-in-circle($width, $height, $border-width, $border-color, $stroke-color, $icon-class, $arrow-rotate, $transition-duration, $focus-circle-background-color, $focus-arrow-stroke-color, $hover-circle-background-color, $hover-arrow-stroke-color, $active-circle-border-color, $active-circle-background-color, $active-arrow-stroke-color, $disabled-circle-border-color, $disabled-arrow-stroke-color) {
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  margin: 0;
+  outline: none;
+  border: #{$border-width} solid #{$border-color};
+  border-radius: 50%;
+  padding: 0;
+  width: #{$width};
+  height: #{$height};
+  font: inherit;
+  text-align: inherit;
+  text-transform: inherit;
+  color: inherit;
+  background: transparent;
+  transition-property: border-color, background-color;
+  transition-duration: #{$transition-duration};
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+
+  &.focus-visible {
+    background-color: #{$focus-circle-background-color};
+
+    #{$icon-class} {
+      stroke: #{$focus-arrow-stroke-color};
+    }
+  }
+
+  @include hover {
+    &:hover {
+      background-color: #{$hover-circle-background-color};
+
+      #{$icon-class} {
+        stroke: #{$hover-arrow-stroke-color};
+      }
+    }
+  }
+
+  &:active {
+    border-color: #{$active-circle-border-color};
+    background-color: #{$active-circle-background-color};
+
+    #{$icon-class} {
+      stroke: #{$active-arrow-stroke-color};
+    }
+  }
+
+  &:disabled {
+    border-color: #{$disabled-circle-border-color};
+    cursor: default;
+    pointer-events: none;
+    user-select: none;
+
+    #{$icon-class} {
+      stroke: #{$disabled-arrow-stroke-color};
+    }
+  }
+
+  &__icon {
+    @include svg-dereset;
+
+    stroke: #{$stroke-color};
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    transform: rotateY(#{$arrow-rotate});
+    transition: stroke #{$transition-duration} ease-in-out;
+  }
+}

@@ -1,0 +1,89 @@
+.primary-navigation {
+  @include bp-max-830 {
+    max-width: 624px;
+    background-image: url("../img/svg/fv-elephant-gray-bg.svg");
+    background-position: right 12px bottom;
+    background-repeat: no-repeat;
+  }
+
+  @include bp-max-576 {
+    max-width: 100%;
+    background-image: none;
+  }
+
+  &__list {
+    @include list-enum-dereset;
+    @include f-center-sb;
+
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @include bp-max-830 {
+      display: grid;
+      column-gap: 64px;
+      justify-content: flex-start;
+      grid-template-columns: repeat(2, auto);
+      row-gap: 41px;
+    }
+
+    @include bp-max-576 {
+      grid-template-columns: auto;
+    }
+  }
+
+  &__item {
+    &:nth-child(2) {
+      @include bp-max-830 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
+    }
+
+    &:nth-child(3) {
+      @include bp-max-830 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+      }
+    }
+  }
+
+  &__link {
+    @include zero-index;
+
+    display: inline-block;
+    outline: none;
+    line-height: lh-numeric(16px, 22px);
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+    transition: color var(--medium-transition-duration) ease-in-out;
+
+    &::before {
+      @include focus-background-fill(-10px, -10px, 0, 0, var(--fifth-color-mode));
+
+      content: "";
+    }
+
+    &.focus-visible {
+      &::before {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+
+    @include hover {
+      &:hover {
+        &:not(.focus-visible) {
+          color: var(--first-color-mode);
+        }
+      }
+    }
+
+    &:active {
+      &:not(.focus-visible) {
+        color: var(--third-color-mode);
+      }
+    }
+  }
+}

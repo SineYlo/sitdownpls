@@ -1,0 +1,100 @@
+// stylelint-disable order/order
+.search-form {
+  @include f-ai-center;
+
+  width: percentage-of-number(1061px, 1280px);
+
+  @include bp-max-1070 {
+    width: 100%;
+  }
+
+  @include bp-max-576 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__wrapper {
+    @include zero-index;
+
+    width: percentage-of-number(761px, 1061px);
+
+    @include bp-max-576 {
+      margin-bottom: 16px;
+      width: 100%;
+    }
+  }
+
+  &__choosing-category {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__search-field {
+    @include field-search-dereset;
+
+    -webkit-appearance: none;
+    appearance: none;
+    vertical-align: middle;
+    margin: 0;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: var(--second-br) 0 0 var(--second-br);
+    padding: 18px 77px 18px 57px;
+    width: 100%;
+    height: 60px;
+    font: inherit;
+    line-height: lh-numeric(16px, 19px);
+    text-align: inherit;
+    text-transform: inherit;
+    color: var(--tenth-other-color);
+    background-color: var(--eighth-other-color);
+    transition-property: color, border-color, background-color;
+    transition-duration: var(--medium-transition-duration);
+    transition-timing-function: ease-in-out;
+
+    @include bp-max-576 {
+      border-radius: var(--second-br);
+    }
+
+    &::placeholder {
+      color: currentColor;
+    }
+
+    &.focus-visible {
+      border-color: var(--first-color-mode);
+      background-color: var(--fourth-color-mode);
+    }
+
+    @include hover {
+      &:hover {
+        &:not(.focus-visible) {
+          background-color: var(--ninth-other-color);
+        }
+      }
+    }
+
+    &:active {
+      color: var(--twelfth-other-color);
+
+      + .search-form__icon {
+        fill: var(--first-color-mode);
+      }
+    }
+  }
+
+  &__icon {
+    @include svg-dereset;
+
+    position: absolute;
+    left: 32px;
+    top: 20px;
+    fill: var(--tenth-other-color);
+    transition: fill var(--medium-transition-duration) ease-in-out;
+  }
+
+  &__activate-search {
+    position: absolute;
+    right: 32px;
+    top: 14px;
+  }
+}

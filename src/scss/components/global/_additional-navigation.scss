@@ -1,0 +1,48 @@
+.additional-navigation {
+  width: percentage-of-number(710px, 1280px);
+
+  @include bp-max-1070 {
+    width: percentage-of-number(710px, 952px);
+  }
+
+  @include bp-max-830 {
+    width: 100%;
+  }
+
+  @include bp-max-576 {
+    @include knock-block;
+
+    padding: 24px 12px;
+    background-color: var(--eighth-other-color);
+  }
+
+  &__list {
+    @include f-center-sb;
+    @include list-enum-dereset;
+
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @include bp-max-830 {
+      gap: 10px;
+    }
+
+    @include bp-max-576 {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      row-gap: 12px;
+    }
+  }
+
+  &__item {
+    &:nth-child(3) {
+      @include bp-max-576 {
+        max-width: 114px;
+      }
+    }
+  }
+
+  &__link {
+    @include zero-index;
+  }
+}

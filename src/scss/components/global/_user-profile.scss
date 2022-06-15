@@ -1,0 +1,65 @@
+.user-profile {
+  -webkit-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+  outline: none;
+  border-radius: 0;
+  padding: 0;
+  font: inherit;
+  text-align: inherit;
+  text-transform: inherit;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+
+  &::before {
+    @include focus-background-fill(-4px, -4px, -4px, -4px, var(--second-color-mode));
+
+    content: "";
+  }
+
+  &.focus-visible {
+    &::before {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .user-profile__icon {
+      fill: var(--seventh-other-color);
+    }
+  }
+
+  @include hover {
+    &:hover {
+      &:not(.focus-visible) {
+        .user-profile__icon {
+          fill: var(--second-color-mode);
+        }
+      }
+    }
+  }
+
+  &:active {
+    &:not(.focus-visible) {
+      .user-profile__icon {
+        fill: var(--third-color-mode);
+      }
+    }
+  }
+
+  &:disabled {
+    @include button-disabled;
+
+    .user-profile__icon {
+      fill: var(--tenth-other-color);
+    }
+  }
+
+  &__icon {
+    @include svg-dereset;
+
+    fill: var(--first-color-mode);
+    transition: fill var(--medium-transition-duration) ease-in-out;
+  }
+}

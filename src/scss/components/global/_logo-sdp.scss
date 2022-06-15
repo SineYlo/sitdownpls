@@ -1,0 +1,22 @@
+.logo-sdp {
+  outline: none;
+  height: 27px;
+
+  &::before {
+    @include focus-background-fill(-2px, -2px, -2px, -2px, var(--fifth-color-mode));
+
+    content: "";
+  }
+
+  &.focus-visible {
+    &::before {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  &__image {
+    @include img-dereset;
+  }
+}
