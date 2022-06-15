@@ -8,13 +8,15 @@ import { config } from '../config';
 
 const graphicsOptimizationJpg = () => {
   return src(config.source.convertjpg)
+    .pipe(rename({
+      extname: '.jpg',
+    }))
     .pipe(squoosh({
       mozjpeg: {},
       webp: {},
       avif: {},
     }))
     .pipe(rename({
-      extname: '.jpg',
       dirname: 'pictures/',
     }))
     .pipe(dest(config.build.pictures));

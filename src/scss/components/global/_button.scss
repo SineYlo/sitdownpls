@@ -1,0 +1,83 @@
+// stylelint-disable order/order
+.button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  outline: none;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: var(--second-br);
+  font: inherit;
+  line-height: 1;
+  text-align: inherit;
+  text-transform: inherit;
+  transition-property: color, border-color, background-color;
+  transition-duration: var(--medium-transition-duration);
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+
+  &.focus-visible {
+    background-color: var(--second-color-mode);
+  }
+
+  &_fill {
+    border-color: transparent;
+    font-weight: var(--second-font-weight);
+    color: var(--seventh-other-color);
+    background-color: var(--first-color-mode);
+
+    &.focus-visible {
+      border-color: var(--third-color-mode);
+    }
+
+    @include hover {
+      &:hover {
+        background-color: var(--second-color-mode);
+      }
+    }
+
+    &:disabled {
+      background-color: var(--ninth-other-color);
+    }
+  }
+
+  &_stroke {
+    border-color: var(--first-color-mode);
+    padding: 17px 33px;
+    font-weight: var(--first-font-weight);
+    color: var(--first-color-mode);
+    background-color: transparent;
+
+    &.focus-visible {
+      color: var(--seventh-other-color);
+    }
+
+    @include hover {
+      &:hover {
+        color: var(--seventh-other-color);
+        background-color: var(--first-color-mode);
+      }
+    }
+
+    &:active {
+      border-color: var(--third-color-mode);
+      color: var(--seventh-other-color);
+    }
+
+    &:disabled {
+      border-color: var(--ninth-other-color);
+    }
+  }
+
+  &:active {
+    background-color: var(--third-color-mode);
+  }
+
+  &:disabled {
+    @include button-disabled;
+
+    color: var(--tenth-other-color);
+  }
+}

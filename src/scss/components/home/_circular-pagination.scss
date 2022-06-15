@@ -1,0 +1,52 @@
+.circular-pagination {
+  @include f-center;
+
+  pointer-events: none;
+  gap: 10px;
+
+  &__bullet {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    opacity: 1;
+    pointer-events: auto;
+
+    .swiper-horizontal > .swiper-pagination-bullets &,
+    .swiper-pagination-horizontal.swiper-pagination-bullets & {
+      margin: 0;
+    }
+  }
+
+  &__svg {
+    @include svg-dereset;
+  }
+
+  &__bg {
+    stroke: var(--seventh-other-color);
+  }
+
+  &__progress {
+    stroke: var(--first-other-color);
+    stroke-dasharray: var(--stroke-dasharray);
+    stroke-dashoffset: var(--stroke-dashoffset);
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: center;
+
+    .ui-slide-change-active &,
+    .swiper-pagination-bullet.swiper-pagination-bullet-active.ui-active-first & {
+      animation: circle-filling var(--duration-filling) linear;
+    }
+  }
+}
+
+@keyframes circle-filling {
+  0% {
+    stroke-dashoffset: var(--stroke-dashoffset);
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
