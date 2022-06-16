@@ -13,10 +13,6 @@
   }
 
   &__swiper {
-    &-wrapper {
-      @include list-enum-dereset;
-    }
-
     &-slide {
       @include zero-index;
 

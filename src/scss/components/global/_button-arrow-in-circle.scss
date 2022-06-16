@@ -72,5 +72,9 @@
     &_direction_left {
       transform: rotateY(180deg);
     }
+
+    &_direction_right {
+      transform: translateX(1px);
+    }
   }
 }

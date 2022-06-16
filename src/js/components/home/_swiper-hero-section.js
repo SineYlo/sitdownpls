@@ -1,13 +1,15 @@
 /* eslint-disable no-param-reassign */
 import Swiper from 'swiper/swiper-bundle';
 
-const swiperHeroSection = document.querySelector('.hero-section__swiper');
+const heroSection = document.querySelector('.hero-section');
 
-if (swiperHeroSection) {
+if (heroSection) {
+  const swiperContainer = heroSection.querySelector('.swiper');
+
   const swiperDuration = 4000;
   const swiperDelay = 1000;
 
-  const swiper = new Swiper(swiperHeroSection, {
+  const swiper = new Swiper(swiperContainer, {
     loop: true,
     speed: swiperDelay,
 

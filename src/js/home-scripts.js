@@ -7,5 +7,5 @@ import './components/home/_custom-select-choosing-region';
 import './components/home/_custom-select-choosing-category';
 // |=============== CONNECTING THE SCRIPT | NAVIGATION MENU ===============>
 import './components/home/_navigation-menu';
-// |=============== CONNECTING THE SCRIPT | SWIPER HERO SECTION ===============>
+// |=============== CONNECTING THE SCRIPT | SWIPER - HERO SECTION ===============>
 import './components/home/_swiper-hero-section';

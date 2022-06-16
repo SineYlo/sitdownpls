@@ -41,3 +41,9 @@
     --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   }
 }
+
+.swiper {
+  &-wrapper {
+    @include list-enum-dereset;
+  }
+}
