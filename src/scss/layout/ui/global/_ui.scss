@@ -18,6 +18,10 @@
 
 .site-main {
   @include main-dereset;
+
+  &__section {
+    margin-bottom: 70px;
+  }
 }
 
 .container {

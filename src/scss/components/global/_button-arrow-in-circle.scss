@@ -1,0 +1,76 @@
+.button-arrow-in-circle {
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  margin: 0;
+  outline: none;
+  border: 2px solid var(--first-color-mode);
+  border-radius: 50%;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  font: inherit;
+  text-align: inherit;
+  text-transform: inherit;
+  color: inherit;
+  background: transparent;
+  transition-property: border-color, background-color;
+  transition-duration: var(--medium-transition-duration);
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+
+  &.focus-visible {
+    background-color: var(--second-color-mode);
+
+    .button-arrow-in-circle__icon {
+      stroke: var(--seventh-other-color);
+    }
+  }
+
+  @include hover {
+    &:hover {
+      background-color: var(--first-color-mode);
+
+      .button-arrow-in-circle__icon {
+        stroke: var(--seventh-other-color);
+      }
+    }
+  }
+
+  &:active {
+    border-color: var(--third-color-mode);
+    background-color: var(--third-color-mode);
+
+    .button-arrow-in-circle__icon {
+      stroke: var(--seventh-other-color);
+    }
+  }
+
+  &:disabled {
+    border-color: var(--tenth-other-color);
+    cursor: default;
+    pointer-events: none;
+    user-select: none;
+
+    .button-arrow-in-circle__icon {
+      stroke: var(--tenth-other-color);
+    }
+  }
+
+  &__icon {
+    @include svg-dereset;
+
+    stroke: var(--first-color-mode);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    transition: stroke var(--medium-transition-duration) ease-in-out;
+
+    &_direction_left {
+      transform: rotateY(180deg);
+    }
+  }
+}
