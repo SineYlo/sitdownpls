@@ -1,0 +1,13 @@
+.swiper {
+  &-wrapper {
+    @include list-enum-dereset;
+  }
+
+  &_indent {
+    margin-bottom: 16px;
+  }
+
+  &_rounding-corners {
+    border-radius: var(--second-br);
+  }
+}

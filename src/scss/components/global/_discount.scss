@@ -1,0 +1,27 @@
+.discount {
+  display: inline-flex;
+
+  &__text {
+    @include zero-index;
+
+    display: inline-flex;
+    justify-content: center;
+    padding: 7px;
+    min-width: 82px;
+    font-weight: var(--second-font-weight);
+    font-size: var(--text-size-small);
+    line-height: lh-numeric(14px, 20px);
+    color: var(--seventh-other-color);
+    background-color: var(--first-other-color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: -10px;
+      top: 0;
+      border-style: solid;
+      border-width: 17px 0 17px 10px;
+      border-color: transparent transparent transparent var(--first-other-color);
+    }
+  }
+}

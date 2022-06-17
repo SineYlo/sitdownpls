@@ -1,0 +1,30 @@
+.swiper-controls {
+  font-size: 0;
+
+  &_first {
+    @include bp-max-576 {
+      display: none;
+    }
+  }
+
+  &_second {
+    display: none;
+
+    @include bp-max-576 {
+      @include f-jc-center;
+    }
+  }
+
+  &__button-prev,
+  &__button-next {
+    position: static;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &__button-prev {
+    margin-right: 13px;
+  }
+}

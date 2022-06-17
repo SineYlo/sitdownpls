@@ -1,0 +1,17 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--container-offset);
+  padding-left: var(--container-offset);
+  max-width: var(--container-width);
+
+  @include bp-max-1070 {
+    --content-width: 952px;
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  }
+
+  @include bp-max-830 {
+    --content-width: 624px;
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  }
+}

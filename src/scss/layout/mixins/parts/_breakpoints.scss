@@ -1,13 +1,31 @@
 // |=============== SETTING UP MIXINS WITH DIFFERENT BREAKPOINTS ===============>
 // |CM| Custom breakpoints are recorded here
+@mixin bp-max-1220 {
+  @media screen and (max-width: 76.25em) {
+    @content;
+  }
+}
+
 @mixin bp-max-1070 {
   @media screen and (max-width: 66.875em) {
     @content;
   }
 }
 
+@mixin bp-max-992 {
+  @media screen and (max-width: 62em) {
+    @content;
+  }
+}
+
 @mixin bp-max-830 {
   @media screen and (max-width: 51.875em) {
+    @content;
+  }
+}
+
+@mixin bp-max-590 {
+  @media screen and (max-width: 36.875em) {
     @content;
   }
 }

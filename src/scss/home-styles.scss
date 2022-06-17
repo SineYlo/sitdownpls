@@ -8,6 +8,8 @@
 @import "layout/ui/global/ui";
 
 // |=============== CONNECTING THE COMPONENTS ===============>
+@import "components/global/container";
+@import "components/global/swiper";
 @import "components/global/choosing-region";
 @import "components/global/choosing-category";
 @import "components/global/navigation-link";
@@ -24,6 +26,13 @@
 @import "components/global/button";
 @import "components/global/header";
 @import "components/global/circular-pagination";
+@import "components/global/title";
+@import "components/global/discount";
+@import "components/global/new-price";
+@import "components/global/old-price";
+@import "components/global/section-header";
+@import "components/global/swiper-controls";
+@import "components/global/special-offer-card";
 @import "components/home/hero-section";
 @import "components/global/footer";
 

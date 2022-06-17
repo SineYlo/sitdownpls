@@ -1,0 +1,103 @@
+// stylelint-disable order/order
+.special-offer-card {
+  --card-width: 296px;
+
+  border-radius: var(--second-br);
+  padding: 30px;
+  width: var(--card-width);
+  height: auto;
+  min-height: 511px;
+  background-color: var(--eighth-other-color);
+
+  &_size_l {
+    width: calc(100% - (var(--card-width) * 2) - (var(--first-gap) * 2));
+  }
+
+  @include bp-max-992 {
+    width: calc(50% - 16px);
+  }
+
+  @include bp-max-590 {
+    width: 100%;
+  }
+
+  &__content {
+    @include flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  &__discount {
+    position: absolute;
+    left: 0;
+    top: 30px;
+  }
+
+  &__picture {
+    display: block;
+    align-self: center;
+    margin-bottom: 16px;
+
+    &_sofa {
+      @include bp-max-1070 {
+        margin-right: -30px;
+        margin-left: -30px;
+        padding-right: 21px;
+        padding-left: 21px;
+      }
+    }
+
+    &_indent-first {
+      @include bp-max-1070 {
+        margin-bottom: 48px;
+      }
+    }
+
+    &_indent-second {
+      @include bp-max-1070 {
+        margin-bottom: 55px;
+      }
+    }
+  }
+
+  &__image {
+    @include img-dereset;
+
+    &_sofa {
+      @include bp-max-992 {
+        width: 254px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 22px;
+    max-width: 222px;
+  }
+
+  &__prices {
+    margin-bottom: 22px;
+  }
+
+  &__new-price {
+    margin-right: 30px;
+  }
+
+  &__inner {
+    @include f-jc-sb;
+
+    width: 100%;
+  }
+
+  &__mini-picture {
+    display: block;
+    align-self: flex-end;
+
+    @include bp-max-1220 {
+      display: none;
+    }
+  }
+}

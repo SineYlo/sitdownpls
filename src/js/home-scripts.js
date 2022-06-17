@@ -9,3 +9,7 @@ import './components/home/_custom-select-choosing-category';
 import './components/home/_navigation-menu';
 // |=============== CONNECTING THE SCRIPT | SWIPER - HERO SECTION ===============>
 import './components/home/_swiper-hero-section';
+// |=============== CONNECTING THE SCRIPT | SWIPER - SPECIAL OFFERS SECTION ===============>
+import './components/home/_swiper-special-offers-section';
+// |=============== CONNECTING THE SCRIPT | OBSERVER ===============>
+import './components/global/_observer';

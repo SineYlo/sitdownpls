@@ -1,0 +1,15 @@
+.section-header {
+  @include f-jc-sb;
+
+  &_indent {
+    margin-bottom: 26px;
+  }
+
+  &__title {
+    margin: 0;
+
+    @include bp-max-576 {
+      max-width: 212px;
+    }
+  }
+}

@@ -49,8 +49,10 @@
     }
   }
 
-  &:disabled {
+  &:disabled,
+  &[aria-disabled="true"] {
     border-color: var(--tenth-other-color);
+    opacity: 1;
     cursor: default;
     pointer-events: none;
     user-select: none;

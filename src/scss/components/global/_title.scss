@@ -1,0 +1,30 @@
+.title {
+  font-weight: 400;
+
+  &_size_l {
+    font-size: var(--text-size-huge);
+    line-height: lh-numeric(32px, 32px);
+
+    @include bp-max-576 {
+      font-size: var(--text-size-large);
+      line-height: lh-numeric(24px, 24px);
+    }
+  }
+
+  &_size_m {
+    font-size: var(--text-size-large);
+  }
+
+  &_size_s {
+    font-size: var(--text-size-medium);
+    line-height: lh-numeric(18px, 23px);
+  }
+
+  &_lh_l {
+    line-height: lh-numeric(24px, 33px);
+  }
+
+  &_lh_m {
+    line-height: lh-numeric(24px, 31px);
+  }
+}
