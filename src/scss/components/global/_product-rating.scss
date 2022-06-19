@@ -1,0 +1,27 @@
+.product-rating {
+  @include f-i-center;
+
+  line-height: lh-numeric(16px, 21px);
+  color: var(--first-other-color);
+
+  &::before {
+    content: "";
+    display: inline-block;
+    margin-right: 6px;
+    width: 16px;
+    height: 15px;
+    background-image: url("../img/svg/icon-orange-star-bg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include bp-max-576 {
+      width: 13px;
+      height: 12px;
+    }
+  }
+
+  @include bp-max-576 {
+    font-size: var(--text-size-tiny);
+    line-height: lh-numeric(12px, 16px);
+  }
+}

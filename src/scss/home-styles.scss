@@ -1,13 +1,15 @@
 // |=============== CONNECTING FILES WITH BASIC SETTINGS ===============>
-@import "base/destyle-mixins";
+@import "config/resets/destyle-mixins";
 @import "config/variables/global/variables";
 @import "config/settings/global/settings";
-@import "layout/mixins/global/mixins";
+@import "config/mixins/global/mixins";
 @import "config/fonts/global/fonts";
 @import "config/fonts/home/fonts";
-@import "layout/ui/global/ui";
 
 // |=============== CONNECTING THE COMPONENTS ===============>
+@import "components/base/site-page";
+@import "components/base/site-body";
+@import "components/base/site-main";
 @import "components/global/container";
 @import "components/global/swiper";
 @import "components/global/choosing-region";
@@ -24,7 +26,7 @@
 @import "components/global/user-profile";
 @import "components/global/shopping-cart";
 @import "components/global/button";
-@import "components/global/header";
+@import "components/base/site-header";
 @import "components/global/circular-pagination";
 @import "components/global/title";
 @import "components/global/discount";
@@ -33,8 +35,13 @@
 @import "components/global/section-header";
 @import "components/global/swiper-controls";
 @import "components/global/special-offer-card";
+@import "components/global/section";
+@import "components/global/product-card";
+@import "components/global/product-rating";
+@import "components/global/default-price";
 @import "components/home/hero-section";
-@import "components/global/footer";
+@import "components/home/high-rating-section";
+@import "components/base/site-footer";
 
 // |=============== CONNECTING A GLOBAL MEDIA-QUERY THAT DISABLES ANIMATIONS AND EFFECTS ===============>
 @import "media/global/query-reduced";

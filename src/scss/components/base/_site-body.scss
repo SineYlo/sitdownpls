@@ -1,0 +1,32 @@
+// stylelint-disable order/order
+// stylelint-disable selector-pseudo-class-no-unknown
+.site-body {
+  @include margin-dereset;
+
+  min-width: 320px;
+  font-family: var(--first-font-family);
+  text-rendering: optimizeLegibility;
+  color: var(--twelfth-other-color);
+
+  &::-webkit-scrollbar {
+    width: 12px;
+
+    &:horizontal {
+      height: 12px;
+    }
+  }
+
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-corner {
+    background-color: var(--ninth-other-color);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: var(--second-br);
+    background-color: var(--first-color-mode);
+  }
+
+  @include pointer {
+    text-rendering: optimizeSpeed;
+  }
+}

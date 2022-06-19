@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="page" lang="ru">
+<html class="site-page" lang="ru">
   <head>
     <!--#========== PAGE ENCODING ==========#-->
     <meta charset="UTF-8">
@@ -52,7 +52,7 @@
     <!--#========== CONNECTING THE SCRIPTS ==========#-->
     <script src="js/home-scripts.min.js" defer></script>
   </head>
-  <body class="body page__body">
+  <body class="site-body site-page__site-body">
     <!--#========== CONNECTING THE SITE HEADER ==========#-->
     @include("html/components/home/_home-header.html")
     <!--#========== THE MAIN PART OF THE SITE ==========#-->
@@ -61,8 +61,8 @@
       @include("html/components/home/_hero-section.html")
       <!--#========== CONNECTING THE SECTION | SPECIAL OFFERS ==========#-->
       @include("html/components/home/_special-offers-section.html")
-      <!--#========== CONNECTING THE SECTION | ==========#-->
-      <!-- @include("html/components/home") -->
+      <!--#========== CONNECTING THE SECTION | HIGH RATING ==========#-->
+      @include("html/components/home/_high-rating-section.html")
     </main>
     <!--#========== CONNECTING THE SITE FOOTER ==========#-->
     @include("html/components/global/_footer.html")

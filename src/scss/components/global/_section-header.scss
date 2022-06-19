@@ -7,9 +7,5 @@
 
   &__title {
     margin: 0;
-
-    @include bp-max-576 {
-      max-width: 212px;
-    }
   }
 }
