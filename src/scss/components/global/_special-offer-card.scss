@@ -79,11 +79,11 @@
   }
 
   &__prices {
-    margin-bottom: 22px;
-  }
+    @include flex;
 
-  &__new-price {
-    margin-right: 30px;
+    column-gap: 30px;
+    margin-bottom: 22px;
+    row-gap: 10px;
   }
 
   &__inner {
