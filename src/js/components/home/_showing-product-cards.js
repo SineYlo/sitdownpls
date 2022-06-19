@@ -1,8 +1,8 @@
 const highRatingSection = document.querySelector('.high-rating-section');
 
-const firstBreakpoint = window.matchMedia('(min-width: 6.25em)').matches; // 100px
-const secondBreakpoint = window.matchMedia('(min-width: 51.937em)').matches; // 831px
-const thirdBreakpoint = window.matchMedia('(min-width: 66.9375em)').matches; // 1071px
+const firstBreakpoint = '(min-width: 6.25em)'; // 100px
+const secondBreakpoint = '(min-width: 51.9375em)'; // 831px
+const thirdBreakpoint = '(min-width: 66.9375em)'; // 1071px
 
 function showingCardsByClick(showOnLoad = 8, showMore = 4) {
   const SHOW_ON_LOAD = showOnLoad;
@@ -35,15 +35,19 @@ function showingCardsByClick(showOnLoad = 8, showMore = 4) {
 }
 
 function changingValuesOnBreakpoints() {
-  if (thirdBreakpoint) {
+  if (window.matchMedia(thirdBreakpoint).matches) {
     showingCardsByClick();
-  } else if (secondBreakpoint) {
+  } else if (window.matchMedia(secondBreakpoint).matches) {
     showingCardsByClick(6, 3);
-  } else if (firstBreakpoint) {
+  } else if (window.matchMedia(firstBreakpoint).matches) {
     showingCardsByClick(6, 2);
   }
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+  changingValuesOnBreakpoints();
+});
+
+window.addEventListener('resize', () => {
   changingValuesOnBreakpoints();
 });
