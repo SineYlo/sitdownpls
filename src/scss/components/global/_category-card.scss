@@ -1,0 +1,207 @@
+// stylelint-disable order/order
+.category-card {
+  border-radius: var(--second-br);
+  padding: 27px 30px 30px;
+  background-color: var(--eighth-other-color);
+
+  &_armchairs,
+  &_beds,
+  &_curbstones,
+  &_chairs {
+    @include bp-max-576 {
+      padding: 16px;
+    }
+  }
+
+  &__content {
+    @include flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  &__list {
+    @include flex;
+
+    column-gap: 30px;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0 0 12px;
+    padding: 0;
+    row-gap: 5px;
+
+    &_armchairs,
+    &_beds,
+    &_curbstones,
+    &_chairs {
+      @include bp-max-640 {
+        flex-direction: column;
+        margin-bottom: 7px;
+      }
+    }
+
+    &_sofas {
+      @include bp-max-576 {
+        column-gap: 20px;
+      }
+    }
+  }
+
+  &__item {
+    @include bp-max-576 {
+      line-height: 0;
+    }
+  }
+
+  &__link {
+    @include zero-index;
+
+    display: inline-block;
+    outline: none;
+    font-size: var(--text-size-small);
+    line-height: lh-numeric(14px, 20px);
+    text-decoration: none;
+    color: var(--tenth-other-color);
+    background-color: transparent;
+    transition: color var(--medium-transition-duration) ease-in-out;
+
+    &_armchairs,
+    &_beds,
+    &_curbstones,
+    &_chairs {
+      @include bp-max-576 {
+        font-size: var(--text-size-min-huge);
+        line-height: lh-numeric(10px, 10px);
+      }
+    }
+
+    &::before {
+      @include focus-background-fill(-10px, -10px, -1px, -1px, var(--fifth-color-mode));
+
+      content: "";
+    }
+
+    &.focus-visible {
+      color: var(--third-color-mode);
+
+      &::before {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+
+    @include hover {
+      &:hover {
+        &:not(.focus-visible) {
+          color: var(--first-color-mode);
+        }
+      }
+    }
+
+    &:active {
+      &:not(.focus-visible) {
+        color: var(--third-color-mode);
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 29px;
+
+    @include bp-max-1070 {
+      margin-bottom: 36px;
+    }
+
+    @include bp-max-576 {
+      margin-bottom: 14px;
+    }
+
+    &_armchairs,
+    &_beds,
+    &_curbstones,
+    &_chairs {
+      @include bp-max-576 {
+        font-size: var(--text-size-base);
+      }
+    }
+
+    &_curbstones {
+      @include bp-max-576 {
+        line-height: lh-numeric(16px, 17px);
+      }
+    }
+  }
+
+  &__picture {
+    margin-bottom: auto;
+    margin-left: -30px;
+
+    &_beds {
+      @include bp-max-1070 {
+        margin-right: -30px;
+      }
+
+      @include bp-max-992 {
+        margin-right: 0;
+      }
+
+      @include bp-max-830 {
+        margin-right: -30px;
+      }
+    }
+
+    &_armchairs,
+    &_beds,
+    &_curbstones,
+    &_chairs {
+      @include bp-max-576 {
+        margin-right: -16px;
+        margin-left: -16px;
+      }
+    }
+
+    &_sofas {
+      @include bp-max-576 {
+        margin-right: -30px;
+      }
+    }
+  }
+
+  &__image {
+    @include img-dereset;
+
+    &_armchairs,
+    &_curbstones,
+    &_chairs {
+      @include bp-max-1070 {
+        width: auto;
+      }
+    }
+
+    &_beds {
+      @include bp-max-992 {
+        width: 400px;
+      }
+
+      @include bp-max-576 {
+        width: auto;
+      }
+    }
+
+    &_sofas {
+      @include bp-max-576 {
+        width: auto;
+      }
+    }
+  }
+
+  &__link-arrow-in-circle {
+    margin-top: 20px;
+
+    @include bp-max-576 {
+      margin-top: 14px;
+    }
+  }
+}

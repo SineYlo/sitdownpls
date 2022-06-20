@@ -1,0 +1,82 @@
+.link-arrow-in-circle {
+  @include f-i-center;
+
+  outline: none;
+  font-weight: var(--second-font-weight);
+  line-height: lh-numeric(16px, 19px);
+  text-decoration: underline solid transparent;
+  text-decoration-thickness: 2px;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 2px;
+  color: var(--first-color-mode);
+  background-color: transparent;
+  transition-property: color, text-decoration-color;
+  transition-duration: var(--medium-transition-duration);
+  transition-timing-function: ease-in-out;
+
+  &.focus-visible {
+    text-decoration-color: var(--first-color-mode);
+
+    .link-arrow-in-circle__icon {
+      background-color: var(--second-color-mode);
+    }
+
+    .link-arrow-in-circle__svg {
+      stroke: var(--seventh-other-color);
+    }
+  }
+
+  @include hover {
+    &:hover {
+      text-decoration-color: var(--first-color-mode);
+
+      .link-arrow-in-circle__icon {
+        background-color: var(--first-color-mode);
+      }
+
+      .link-arrow-in-circle__svg {
+        stroke: var(--seventh-other-color);
+      }
+    }
+  }
+
+  &:active {
+    text-decoration-color: currentColor;
+    color: var(--third-color-mode);
+
+    .link-arrow-in-circle__icon {
+      border-color: currentColor;
+      background-color: currentColor;
+    }
+
+    .link-arrow-in-circle__svg {
+      stroke: var(--seventh-other-color);
+    }
+  }
+
+  &__text {
+    margin-right: 5px;
+  }
+
+  &__icon {
+    @include f-i-center;
+
+    justify-content: center;
+    border: 2px solid var(--first-color-mode);
+    border-radius: var(--third-br);
+    width: 22px;
+    height: 22px;
+    transition-property: border-color, background-color;
+    transition-duration: var(--medium-transition-duration);
+    transition-timing-function: ease-in-out;
+  }
+
+  &__svg {
+    stroke: var(--first-color-mode);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    transform: translateX(1px);
+    transition: stroke var(--medium-transition-duration) ease-in-out;
+  }
+}

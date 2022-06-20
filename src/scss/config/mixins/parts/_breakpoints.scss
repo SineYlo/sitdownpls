@@ -24,6 +24,12 @@
   }
 }
 
+@mixin bp-max-640 {
+  @media screen and (max-width: 40em) {
+    @content;
+  }
+}
+
 @mixin bp-max-590 {
   @media screen and (max-width: 36.875em) {
     @content;

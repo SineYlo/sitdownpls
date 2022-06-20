@@ -1,0 +1,56 @@
+.top-categories-section {
+  &__list {
+    @include list-enum-dereset;
+    @include grid;
+
+    grid-auto-rows: minmax(405px, auto);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: minmax(511px, auto) minmax(405px, auto);
+    gap: var(--first-gap);
+
+    @include bp-max-1070 {
+      grid-auto-rows: minmax(511px, auto);
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: repeat(2, minmax(511px, auto));
+    }
+
+    @include bp-max-992 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(3, minmax(511px, auto));
+    }
+
+    @include bp-max-576 {
+      grid-auto-rows: minmax(240px, auto);
+      grid-template-rows: minmax(393px, auto) repeat(2, minmax(240px, auto));
+      gap: var(--second-gap);
+    }
+  }
+
+  &__category-card {
+    &_sofas,
+    &_armchairs {
+      grid-column: span 6;
+    }
+
+    &_beds,
+    &_curbstones,
+    &_chairs {
+      grid-column: span 4;
+    }
+
+    &_armchairs,
+    &_beds,
+    &_curbstones,
+    &_chairs {
+      @include bp-max-1070 {
+        grid-column: span 3;
+      }
+    }
+
+    &_sofas {
+      @include bp-max-992 {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+}
