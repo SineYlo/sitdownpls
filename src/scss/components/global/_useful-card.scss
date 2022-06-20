@@ -1,0 +1,41 @@
+.useful-card {
+  @include flex;
+
+  flex-direction: column;
+  border-radius: var(--second-br);
+  height: auto;
+  background-color: var(--eighth-other-color);
+
+  &__picture {
+    display: block;
+  }
+
+  &__image {
+    @include img-dereset;
+  }
+
+  &__content {
+    @include flex;
+
+    flex: 1 0 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    min-height: 250px;
+  }
+
+  &__description {
+    margin: 0 0 auto;
+    font-size: var(--text-size-large);
+    line-height: lh-numeric(24px, 33px);
+
+    @include bp-max-1070 {
+      font-size: var(--text-size-base);
+      line-height: lh-numeric(16px, 22px);
+    }
+  }
+
+  &__link {
+    margin-top: 30px;
+  }
+}

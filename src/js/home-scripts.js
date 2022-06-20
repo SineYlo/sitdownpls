@@ -13,5 +13,7 @@ import './components/home/_swiper-hero-section';
 import './components/home/_swiper-special-offers-section';
 // |=============== CONNECTING THE SCRIPT | SHOWING PRODUCT CARDS ===============>
 import './components/home/_showing-product-cards';
+// |=============== CONNECTING THE SCRIPT | SWIPER - USEFUL SECTION ===============>
+import './components/home/_swiper-useful-section';
 // |=============== CONNECTING THE SCRIPT | OBSERVER ===============>
 import './components/global/_observer';
