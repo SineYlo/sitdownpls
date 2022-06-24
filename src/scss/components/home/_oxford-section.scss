@@ -59,9 +59,10 @@
     }
   }
 
-  &__description {
+  &__subtitle {
     margin: -7px 0 48px;
     max-width: 508px;
+    font-weight: inherit;
     font-size: var(--text-size-max-small);
     line-height: lh-numeric(48px, 58px);
     color: var(--seventh-other-color);

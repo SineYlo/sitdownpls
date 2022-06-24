@@ -31,11 +31,15 @@ if (callbackSection) {
     onShow() {
       tooltipButton.classList.add('ui-tooltip-active');
       tooltipButton.setAttribute('aria-label', 'Закрыть всплывающую подсказку');
+      tooltipButton.setAttribute('aria-controls', 'tippy-1');
+      tooltipButton.setAttribute('aria-describedby', 'tippy-1');
     },
 
     onHide() {
       tooltipButton.classList.remove('ui-tooltip-active');
       tooltipButton.setAttribute('aria-label', 'Открыть всплывающую подсказку');
+      tooltipButton.removeAttribute('aria-controls');
+      tooltipButton.removeAttribute('aria-describedby');
     },
   });
 }
