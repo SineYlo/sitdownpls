@@ -53,8 +53,42 @@
   }
 
   &__link {
+    @include zero-index;
+
+    outline: none;
     text-decoration-skip-ink: none;
     color: var(--first-color-mode);
     background-color: transparent;
+    transition: color var(--medium-transition-duration) ease-in-out;
+
+    &::before {
+      @include focus-background-fill(-2px, -2px, -2px, -2px, var(--fifth-color-mode));
+
+      content: "";
+    }
+
+    &.focus-visible {
+      color: var(--third-color-mode);
+
+      &::before {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+
+    @include hover {
+      &:hover {
+        &:not(.focus-visible) {
+          color: var(--second-color-mode);
+        }
+      }
+    }
+
+    &:active {
+      &:not(.focus-visible) {
+        color: var(--third-color-mode);
+      }
+    }
   }
 }
