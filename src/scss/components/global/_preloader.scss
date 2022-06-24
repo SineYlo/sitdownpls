@@ -1,0 +1,84 @@
+.preloader {
+  @include f-center;
+
+  z-index: 1000;
+  background-color: var(--seventh-other-color);
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 86px;
+    height: 86px;
+    gap: 1px;
+  }
+
+  &__square {
+    background-color: var(--first-color-mode);
+    animation: flipping 1.5s calc(var(--delay) * 1s) infinite backwards;
+
+    &:nth-child(1) {
+      --delay: 0.1;
+    }
+
+    &:nth-child(2) {
+      --delay: 0.2;
+    }
+
+    &:nth-child(3) {
+      --delay: 0.3;
+    }
+
+    &:nth-child(4) {
+      --delay: 0.4;
+    }
+
+    &:nth-child(5) {
+      --delay: 0.5;
+    }
+
+    &:nth-child(6) {
+      --delay: 0.6;
+    }
+
+    &:nth-child(7) {
+      --delay: 0.7;
+    }
+
+    &:nth-child(8) {
+      --delay: 0.8;
+    }
+
+    &:nth-child(9) {
+      --delay: 0.9;
+    }
+  }
+
+  .ui-preloader-hidden & {
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: var(--medium-transition-duration);
+    transition-timing-function: ease-in-out;
+  }
+
+  .ui-site-loaded & {
+    display: none;
+  }
+}
+
+@keyframes flipping {
+  0% {
+    transform: perspective(86px) rotateX(-90deg);
+  }
+
+  50%,
+  75% {
+    transform: perspective(86px) rotateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: perspective(86px) rotateX(0);
+  }
+}

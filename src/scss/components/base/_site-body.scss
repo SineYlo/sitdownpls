@@ -30,6 +30,7 @@
     text-rendering: optimizeSpeed;
   }
 
+  &__preloader,
   &__dialog-window {
     position: fixed;
     inset: 0;

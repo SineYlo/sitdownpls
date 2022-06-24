@@ -51,8 +51,18 @@
     <meta name="mobile-web-app-capable" content="yes">
     <!--#========== CONNECTING THE SCRIPTS ==========#-->
     <script src="js/home-scripts.min.js" defer></script>
+    <!--#========== IT WILL WORK IF THE SCRIPTS DON'T LOAD ==========#-->
+    <noscript>
+      <style>
+        .preloader {
+          display: none;
+        }
+      </style>
+    </noscript>
   </head>
   <body class="site-body site-page__site-body">
+    <!--#========== CONNECTING THE PRELOADER ==========#-->
+    @include("html/components/global/_preloader.html")
     <!--#========== CONNECTING THE SITE HEADER ==========#-->
     @include("html/components/home/_home-header.html")
     <!--#========== THE MAIN PART OF THE SITE ==========#-->
