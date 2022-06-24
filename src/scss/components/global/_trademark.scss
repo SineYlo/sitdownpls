@@ -1,0 +1,11 @@
+.trademark {
+  @include f-i-center;
+
+  font-size: var(--text-size-small);
+  line-height: lh-numeric(14px, 20px);
+  color: var(--tenth-other-color);
+
+  &__name {
+    margin-right: 10px;
+  }
+}

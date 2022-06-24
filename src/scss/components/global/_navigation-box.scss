@@ -1,0 +1,20 @@
+.navigation-box {
+  &__title {
+    margin: 0;
+    font-weight: inherit;
+    font-size: var(--text-size-base);
+    line-height: lh-numeric(16px, 21px);
+  }
+
+  &__list {
+    @include list-enum-dereset;
+    @include flex;
+
+    flex-direction: column;
+    row-gap: 5px;
+  }
+
+  &__link {
+    @include zero-index;
+  }
+}

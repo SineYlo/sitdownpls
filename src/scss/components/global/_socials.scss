@@ -1,0 +1,57 @@
+.socials {
+  &__list {
+    @include list-enum-dereset;
+    @include flex;
+
+    flex-wrap: wrap;
+    max-width: 187px;
+    gap: 20px;
+  }
+
+  &__link {
+    @include link-dereset;
+    @include zero-index;
+
+    display: inline-block;
+    outline: none;
+
+    &::before {
+      @include focus-background-fill(-3px, -3px, -3px, -3px, var(--second-color-mode));
+
+      content: "";
+    }
+
+    &.focus-visible {
+      &::before {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .socials__icon {
+        fill: var(--seventh-other-color);
+      }
+    }
+
+    @include hover {
+      &:hover {
+        .socials__icon {
+          fill: var(--first-color-mode);
+        }
+      }
+    }
+
+    &:active {
+      .socials__icon {
+        fill: var(--third-color-mode);
+      }
+    }
+  }
+
+  &__icon {
+    @include svg-dereset;
+
+    fill: var(--tenth-other-color);
+    transition: fill var(--medium-transition-duration) ease-in-out;
+  }
+}

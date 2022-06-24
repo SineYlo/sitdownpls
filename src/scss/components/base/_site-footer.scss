@@ -1,0 +1,88 @@
+.site-footer {
+  &__title {
+    @include visually-hidden;
+  }
+
+  &__first-line {
+    padding-top: 24px;
+    padding-bottom: 21px;
+    background-color: var(--ninth-other-color);
+  }
+
+  &__container {
+    @include f-jc-sb;
+
+    @include bp-max-992 {
+      display: block;
+    }
+  }
+
+  &__inner {
+    @include bp-max-992 {
+      @include f-center-sb;
+
+      margin-bottom: 24px;
+    }
+
+    @include bp-max-576 {
+      flex-direction: column;
+      margin-bottom: 26px;
+    }
+  }
+
+  &__logo-sdp {
+    @include zero-index;
+
+    margin-bottom: 31px;
+
+    @include bp-max-992 {
+      margin-bottom: 0;
+    }
+
+    @include bp-max-576 {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__navigation {
+    width: percentage-of-number(843px, 1280px);
+
+    @include bp-max-1070 {
+      width: percentage-of-number(733px, 952px);
+    }
+
+    @include bp-max-992 {
+      width: 100%;
+    }
+  }
+
+  &__list {
+    @include list-enum-dereset;
+    @include f-jc-sb;
+
+    column-gap: 30px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+
+    @include bp-max-576 {
+      @include grid;
+
+      column-gap: 17px;
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  &__item {
+    @include bp-max-576 {
+      grid-column: span 3;
+    }
+  }
+
+  &__second-line {
+    @include f-center;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: var(--eighth-other-color);
+  }
+}
