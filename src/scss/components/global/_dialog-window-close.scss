@@ -1,0 +1,69 @@
+.dialog-window-close {
+  @include f-i-center;
+
+  -webkit-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+  margin: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  font: inherit;
+  text-align: inherit;
+  text-transform: inherit;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+
+  &.focus-visible {
+    .dialog-window-close__inner {
+      &::before {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+
+    .dialog-window-close__icon {
+      fill: var(--third-color-mode);
+    }
+  }
+
+  @include hover {
+    &:hover {
+      .dialog-window-close__icon {
+        fill: var(--first-color-mode);
+      }
+    }
+  }
+
+  &:active {
+    .dialog-window-close__icon {
+      fill: var(--third-color-mode);
+    }
+  }
+
+  &:disabled {
+    @include button-disabled;
+  }
+
+  &__inner {
+    @include f-i-center;
+    @include zero-index;
+
+    &::before {
+      @include focus-background-fill(-2px, -2px, -2px, -2px, var(--fifth-color-mode));
+
+      content: "";
+    }
+  }
+
+  &__icon {
+    @include svg-dereset;
+
+    fill: var(--tenth-other-color);
+    transition: fill var(--medium-transition-duration) ease-in-out;
+  }
+}

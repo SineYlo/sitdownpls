@@ -1,0 +1,60 @@
+.form-custom-checkbox {
+  @include f-ai-center;
+
+  &__field {
+    @include visually-hidden;
+
+    &:checked + .form-custom-checkbox__text::before {
+      border-color: var(--first-color-mode);
+      background-image: url("../img/svg/icon-short-jackdaw-bg.svg");
+      background-color: var(--first-color-mode);
+    }
+
+    &.focus-visible + .form-custom-checkbox__text {
+      outline-color: var(--first-color-mode);
+    }
+  }
+
+  &__text {
+    @include label-dereset;
+    @include zero-index;
+
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    padding-left: 22px;
+    font-size: var(--text-size-small);
+    line-height: lh-numeric(14px, 20px);
+    transition: outline-color var(--medium-transition-duration) ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      display: inline-block;
+      border: 1px solid var(--tenth-other-color);
+      border-radius: var(--first-br);
+      width: 14px;
+      height: 14px;
+      background-position: center;
+      background-size: 11px 9px;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+      transition-property: border-color, background-color;
+      transition-duration: var(--medium-transition-duration);
+      transition-timing-function: ease-in-out;
+    }
+
+    @include bp-max-576 {
+      padding-left: 20px;
+      font-size: var(--text-size-tiny);
+      line-height: lh-numeric(12px, 16px);
+    }
+  }
+
+  &__link {
+    text-decoration-skip-ink: none;
+    color: var(--first-color-mode);
+    background-color: transparent;
+  }
+}

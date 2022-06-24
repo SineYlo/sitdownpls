@@ -1,0 +1,31 @@
+.data-sent {
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 624px);
+  min-height: 421px;
+
+  @include bp-max-576 {
+    min-height: 216px;
+  }
+
+  &__image {
+    @include img-dereset;
+
+    margin-bottom: 32px;
+
+    @include bp-max-576 {
+      margin-bottom: 14px;
+      width: 73px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+
+    @include bp-max-576 {
+      max-width: 194px;
+      font-size: var(--text-size-base);
+      text-align: center;
+    }
+  }
+}

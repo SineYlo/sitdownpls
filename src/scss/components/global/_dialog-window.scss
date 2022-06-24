@@ -1,0 +1,81 @@
+.dialog-window {
+  z-index: 100;
+  display: none;
+  padding-right: 12px;
+  padding-left: 12px;
+
+  &.ui-dialog-window-visible {
+    display: flex;
+    animation: fade-in-from-none var(--medium-transition-duration) ease-in-out forwards;
+
+    .dialog-window__content {
+      animation: slide-up-from-none var(--medium-transition-duration) ease-in-out;
+    }
+  }
+
+  &.ui-dialog-window-hidden {
+    animation: fade-out-from-block var(--medium-transition-duration) ease-in-out forwards;
+
+    .dialog-window__content {
+      animation: slide-up-from-block var(--medium-transition-duration) ease-in-out;
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    inset: 0;
+    background-color: var(--sixteenth-other-color);
+    cursor: pointer;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    overscroll-behavior: contain;
+    margin: auto;
+    border-radius: var(--second-br);
+    background-color: var(--seventh-other-color);
+    cursor: auto;
+  }
+
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
+
+@keyframes fade-in-from-none {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out-from-block {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up-from-none {
+  0% {
+    transform: translateY(20%);
+  }
+}
+
+@keyframes slide-up-from-block {
+  100% {
+    transform: translateY(-20%);
+  }
+}

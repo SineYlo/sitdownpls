@@ -1,5 +1,5 @@
 import { disablePageScroll, enablePageScroll } from 'scroll-lock';
-import * as focusTrap from 'focus-trap';
+import { createFocusTrap } from 'focus-trap';
 
 const buttonOpenNavigationMenu = document.querySelector('.burger');
 const buttonCloseNavigationMenu = document.querySelector('.close-navigation-menu');
@@ -7,8 +7,7 @@ const navigationMenu = document.querySelector('.site-header__navigation-menu');
 const primaryNavigationLinks = document.querySelectorAll('.primary-navigation__link');
 const additionalNavigationLinks = document.querySelectorAll('.additional-navigation__link');
 
-// |=============== CREATING A FOCUS TRAP ===============>
-const trap = focusTrap.createFocusTrap(navigationMenu, {
+const focusTrap = createFocusTrap(navigationMenu, {
   onActivate: () => navigationMenu.classList.add('ui-focus-trap-active'),
   onDeactivate: () => navigationMenu.classList.remove('ui-focus-trap-active'),
 
@@ -26,11 +25,10 @@ const trap = focusTrap.createFocusTrap(navigationMenu, {
   },
 });
 
-// |=============== OPENING AND CLOSING THE NAVIGATION MENU BY CLICK ===============>
 function activationNavigationMenu(element, elementClass) {
   element.classList.add(`${elementClass}`);
 
-  trap.activate();
+  focusTrap.activate();
 
   disablePageScroll(element);
 }
@@ -38,7 +36,7 @@ function activationNavigationMenu(element, elementClass) {
 function deactivationNavigationMenu(element, elementClass) {
   element.classList.remove(`${elementClass}`);
 
-  trap.deactivate();
+  focusTrap.deactivate();
 
   enablePageScroll(element);
 }
@@ -51,7 +49,6 @@ buttonCloseNavigationMenu.addEventListener('click', () => {
   deactivationNavigationMenu(navigationMenu, 'ui-navigation-menu-active');
 });
 
-// |=============== CLOSING THE NAVIGATION MENU BY CLICKING ON THE LINK ===============>
 if (primaryNavigationLinks) {
   [...primaryNavigationLinks].forEach((primaryLink) => {
     primaryLink.addEventListener('click', () => {
@@ -68,7 +65,6 @@ if (additionalNavigationLinks) {
   });
 }
 
-// |=============== CALCULATING THE HEIGHT OF THE NAVIGATION MENU ===============>
 function heightNavigationMenu() {
   navigationMenu.style.setProperty('--height-navigation-menu', `${window.innerHeight}px`);
 }

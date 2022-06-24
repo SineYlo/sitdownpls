@@ -109,9 +109,9 @@
     ],
     "description": "Creates a code snippet for the form"
   },
-  "modal-box": {
+  "dialog-window": {
     "scope": "html",
-    "prefix": "s-modal",
+    "prefix": "s-dialog",
     "body": [
       "<div class=\"dialog-wrapper\" id=\"dialog-wrapper\" role=\"dialog\" tabindex=\"-1\" aria-labelledby=\"dialog-title\" aria-describedby=\"dialog-description\" aria-modal=\"true\" aria-hidden=\"true\">",
       "  <div class=\"dialog-wrapper__overlay\"></div>",
@@ -122,7 +122,7 @@
       "  </div>",
       "</div>"
     ],
-    "description": "Creates a code snippet for a modal window"
+    "description": "Creates a code snippet for a dialog window"
   },
   "accordion-box": {
     "scope": "html",

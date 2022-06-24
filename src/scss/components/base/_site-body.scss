@@ -29,4 +29,9 @@
   @include pointer {
     text-rendering: optimizeSpeed;
   }
+
+  &__dialog-window {
+    position: fixed;
+    inset: 0;
+  }
 }

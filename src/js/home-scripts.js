@@ -15,5 +15,9 @@ import './components/home/_swiper-special-offers-section';
 import './components/home/_showing-product-cards';
 // |=============== CONNECTING THE SCRIPT | SWIPER - USEFUL SECTION ===============>
 import './components/home/_swiper-useful-section';
+// |=============== CONNECTING THE SCRIPT | TOOLTIP ===============>
+import './components/home/_tooltip-callback-section';
+// |=============== CONNECTING THE SCRIPT | JUST VALIDATE ===============>
+import './components/home/_validation-callback-form';
 // |=============== CONNECTING THE SCRIPT | OBSERVER ===============>
 import './components/global/_observer';

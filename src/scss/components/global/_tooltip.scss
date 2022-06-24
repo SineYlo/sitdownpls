@@ -1,0 +1,84 @@
+// stylelint-disable order/order
+.tooltip {
+  display: inline-flex;
+
+  &__button {
+    @include f-i-center;
+
+    -webkit-appearance: none;
+    appearance: none;
+    justify-content: center;
+    vertical-align: middle;
+    margin: 0;
+    outline: none;
+    border: 1px solid var(--first-other-color);
+    border-radius: var(--third-br);
+    padding: 0;
+    width: 14px;
+    height: 14px;
+    font: inherit;
+    text-align: inherit;
+    text-transform: inherit;
+    color: inherit;
+    background: transparent;
+    transition: background-color var(--medium-transition-duration) ease-in-out;
+    cursor: pointer;
+
+    &.focus-visible {
+      background-color: var(--first-other-color);
+
+      .tooltip__icon {
+        fill: var(--seventh-other-color);
+      }
+    }
+
+    @include hover {
+      &:hover {
+        background-color: var(--first-other-color);
+
+        .tooltip__icon {
+          fill: var(--seventh-other-color);
+        }
+      }
+    }
+
+    &:disabled {
+      @include button-disabled;
+
+      border-color: var(--tenth-other-color);
+
+      .tooltip__icon {
+        fill: var(--tenth-other-color);
+      }
+    }
+
+    &.ui-tooltip-active {
+      background-color: var(--first-other-color);
+
+      .tooltip__icon {
+        fill: var(--seventh-other-color);
+      }
+    }
+  }
+
+  &__icon {
+    fill: var(--first-other-color);
+    transition: fill var(--medium-transition-duration) ease-in-out;
+  }
+
+  .tippy-box {
+    border-radius: 0;
+  }
+
+  .tippy-content {
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: var(--text-size-min-large);
+    line-height: lh-numeric(9px, 14px);
+    text-align: center;
+  }
+
+  .tippy-svg-arrow {
+    display: inline-flex;
+  }
+}

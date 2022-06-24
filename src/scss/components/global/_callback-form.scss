@@ -1,0 +1,30 @@
+.callback-form {
+  @include flex;
+
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__inner {
+    @include zero-index;
+
+    margin-bottom: 30px;
+    width: 100%;
+
+    .just-validate-error-label {
+      top: -17px;
+    }
+  }
+
+  &__button {
+    margin-bottom: 12px;
+    padding: 17px 31px;
+  }
+
+  &__custom-checkbox {
+    @include zero-index;
+
+    .just-validate-error-label {
+      top: -12px;
+    }
+  }
+}

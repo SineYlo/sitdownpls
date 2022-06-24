@@ -203,6 +203,7 @@
 				"overflow-y",
 				"overflow-anchor",
 				"overflow-wrap",
+				"overscroll-behavior",
 				"margin",
 				"margin-top",
 				"margin-right",

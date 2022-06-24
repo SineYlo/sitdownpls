@@ -43,10 +43,19 @@
 @import "components/global/link-arrow-in-circle";
 @import "components/global/category-card";
 @import "components/global/useful-card";
+@import "components/global/tooltip";
+@import "components/global/callback-form";
+@import "components/global/form-field";
+@import "components/global/form-custom-checkbox";
+@import "components/global/just-validate";
+@import "components/global/dialog-window";
+@import "components/global/dialog-window-close";
+@import "components/global/data-sent";
 @import "components/home/hero-section";
 @import "components/home/high-rating-section";
 @import "components/home/oxford-section";
 @import "components/home/top-categories-section";
+@import "components/home/callback-section";
 @import "components/base/site-footer";
 
 // |=============== CONNECTING A GLOBAL MEDIA-QUERY THAT DISABLES ANIMATIONS AND EFFECTS ===============>

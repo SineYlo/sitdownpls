@@ -56,7 +56,7 @@
     <!--#========== CONNECTING THE SITE HEADER ==========#-->
     @include("html/components/home/_home-header.html")
     <!--#========== THE MAIN PART OF THE SITE ==========#-->
-    <main class="site-main">
+    <main class="site-main site-main_indent">
       <!--#========== CONNECTING THE SECTION | HERO ==========#-->
       @include("html/components/home/_hero-section.html")
       <!--#========== CONNECTING THE SECTION | SPECIAL OFFERS ==========#-->
@@ -69,8 +69,12 @@
       @include("html/components/home/_top-categories.html")
       <!--#========== CONNECTING THE SECTION | USEFUL ==========#-->
       @include("html/components/home/_useful-section.html")
+      <!--#========== CONNECTING THE SECTION | CALLBACK ==========#-->
+      @include("html/components/home/_callback-section.html")
     </main>
     <!--#========== CONNECTING THE SITE FOOTER ==========#-->
     @include("html/components/global/_footer.html")
+    <!--#========== CONNECTING THE DIALOG WINDOW | DATA SENT ==========#-->
+    @include("html/components/global/_data-sent-dialog-window.html")
   </body>
 </html>
