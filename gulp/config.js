@@ -47,7 +47,10 @@ const config = {
     scripts: `${projectFolder}/js/`,
   },
   watch: {
-    html: `${sourceFolder}/*.html`,
+    html: [
+      `${sourceFolder}/*.html`,
+      `${sourceFolder}/html/components/**/*.html`,
+    ],
     audio: `${sourceFolder}/assets/audio/**/*.{mp3,ogg,wav,flac}`,
     video: `${sourceFolder}/assets/video/**/*.{mp4,avi,webm}`,
     docs: `${sourceFolder}/assets/docs/**/*.{pdf,docx,doc,txt,rtf,odt,xls,xlsx}`,

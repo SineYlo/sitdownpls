@@ -6,13 +6,21 @@
 @import "config/fonts/global/fonts";
 @import "config/fonts/home/fonts";
 
-// |=============== CONNECTING THE COMPONENTS ===============>
+// |=============== CONNECTING THE COMPONENTS -> COMMON | BASIC ===============>
 @import "components/base/site-page";
 @import "components/base/site-body";
-@import "components/base/site-main";
-@import "components/global/preloader";
-@import "components/global/container";
+
+// |=============== CONNECTING THE COMPONENTS -> COMMON | LIBRARIES ===============>
 @import "components/global/swiper";
+@import "components/global/just-validate";
+
+// |=============== CONNECTING THE COMPONENTS -> COMMON | PRELOADER ===============>
+@import "components/global/preloader";
+
+// |=============== CONNECTING THE COMPONENTS -> COMMON | CONTAINER ===============>
+@import "components/global/container";
+
+// |=============== CONNECTING THE COMPONENTS -> SMALL  | SITE HEADER ===============>
 @import "components/global/choosing-region";
 @import "components/global/choosing-category";
 @import "components/global/navigation-link";
@@ -27,7 +35,11 @@
 @import "components/global/user-profile";
 @import "components/global/shopping-cart";
 @import "components/global/button";
+
+// |=============== CONNECTING THE COMPONENTS -> COMMON | SITE HEADER ===============>
 @import "components/base/site-header";
+
+// |=============== CONNECTING THE COMPONENTS -> SMALL  | SITE MAIN ===============>
 @import "components/global/circular-pagination";
 @import "components/global/title";
 @import "components/global/discount";
@@ -48,19 +60,29 @@
 @import "components/global/callback-form";
 @import "components/global/form-field";
 @import "components/global/form-custom-checkbox";
-@import "components/global/just-validate";
-@import "components/global/dialog-window";
-@import "components/global/dialog-window-close";
-@import "components/global/data-sent";
-@import "components/global/trademark";
-@import "components/global/socials";
-@import "components/global/navigation-box";
+
+// |=============== CONNECTING THE COMPONENTS -> COMMON | SITE MAIN ===============>
 @import "components/home/hero-section";
 @import "components/home/high-rating-section";
 @import "components/home/oxford-section";
 @import "components/home/top-categories-section";
 @import "components/home/callback-section";
+@import "components/base/site-main";
+
+// |=============== CONNECTING THE COMPONENTS -> SMALL  | SITE FOOTER ===============>
+@import "components/global/trademark";
+@import "components/global/socials";
+@import "components/global/navigation-box";
+
+// |=============== CONNECTING THE COMPONENTS -> COMMON | SITE FOOTER ===============>
 @import "components/base/site-footer";
+
+// |=============== CONNECTING THE COMPONENTS -> SMALL  | DIALOG WINDOW ===============>
+@import "components/global/dialog-window";
+@import "components/global/dialog-window-close";
+
+// |=============== CONNECTING THE COMPONENTS -> COMMON | DIALOG WINDOW -> DATA SENT ===============>
+@import "components/global/data-sent";
 
 // |=============== CONNECTING A GLOBAL MEDIA-QUERY THAT DISABLES ANIMATIONS AND EFFECTS ===============>
 @import "media/global/query-reduced";

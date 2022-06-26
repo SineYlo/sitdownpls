@@ -11,9 +11,9 @@
     <link href="fonts/open-sans/open-sans-regular.woff2" rel="preload" as="font" crossorigin>
     <link href="fonts/open-sans/open-sans-bold.woff2" rel="preload" as="font" crossorigin>
     <!--#========== CONNECTING READY-MADE JAVASCRIPT SOLUTIONS ==========#-->
-    <link href="css/home-modules.min.css" rel="stylesheet" media="screen">
+    <link href="css/suppliers-modules.min.css" rel="stylesheet" media="screen">
     <!--#========== INCLUDING STYLE FILES ==========#-->
-    <link href="css/home-styles.min.css" rel="stylesheet" media="screen">
+    <link href="css/suppliers-styles.min.css" rel="stylesheet" media="screen">
     <!--#========== PROVIDES INFORMATION ABOUT THE AUTHOR ==========#-->
     <link href="https://sineylo-dev.ru" rel="me">
     <link href="mailto:contact@sineylo-dev.ru" rel="me">
@@ -50,7 +50,7 @@
     <!--#========== ADDS THE SITE TO THE HOME SCREEN AS AN ANDROID APP ==========#-->
     <meta name="mobile-web-app-capable" content="yes">
     <!--#========== CONNECTING THE SCRIPTS ==========#-->
-    <script src="js/home-scripts.min.js" defer></script>
+    <script src="js/suppliers-scripts.min.js" defer></script>
     <!--#========== IT WILL WORK IF THE SCRIPTS DON'T LOAD ==========#-->
     <noscript>
       <style>
@@ -64,27 +64,13 @@
     <!--#========== CONNECTING THE PRELOADER ==========#-->
     @include("html/components/global/_preloader.html")
     <!--#========== CONNECTING THE SITE HEADER ==========#-->
-    @include("html/components/home/_home-header.html")
+    @include("html/components/pages/suppliers/_suppliers-header.html")
     <!--#========== CONNECTING THE SITE MAIN ==========#-->
     <main class="site-main site-main_indent">
-      <!--#========== CONNECTING THE SECTION | HERO ==========#-->
-      @include("html/components/home/_hero-section.html")
-      <!--#========== CONNECTING THE SECTION | SPECIAL OFFERS ==========#-->
-      @include("html/components/home/_special-offers-section.html")
-      <!--#========== CONNECTING THE SECTION | HIGH RATING ==========#-->
-      @include("html/components/home/_high-rating-section.html")
-      <!--#========== CONNECTING THE SECTION | OXFORD ==========#-->
-      @include("html/components/home/_oxford-section.html")
-      <!--#========== CONNECTING THE SECTION | TOP CATEGORIES ==========#-->
-      @include("html/components/home/_top-categories.html")
-      <!--#========== CONNECTING THE SECTION | USEFUL ==========#-->
-      @include("html/components/home/_useful-section.html")
-      <!--#========== CONNECTING THE SECTION | CALLBACK ==========#-->
-      @include("html/components/home/_callback-section.html")
+      <!--#========== CONNECTING THE SECTION | ==========#-->
+      <!-- @include("html/components") -->
     </main>
     <!--#========== CONNECTING THE SITE FOOTER ==========#-->
-    @include("html/components/home/_home-footer.html")
-    <!--#========== CONNECTING THE DIALOG WINDOW | DATA SENT ==========#-->
-    @include("html/components/global/_data-sent-dialog-window.html")
+    @include("html/components/pages/suppliers/_suppliers-footer.html")
   </body>
 </html>
