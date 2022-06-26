@@ -1,8 +1,7 @@
 /* eslint-disable arrow-body-style */
 import { watch } from 'gulp';
 import browserSync from 'browser-sync';
-import changingMarkupHome from './_markup-home';
-import changingMarkupPages from './_markup-pages';
+import changingMarkup from './_changing-markup';
 import changingStyles from './_changing-styles';
 import changingScripts from './_changing-scripts';
 import {
@@ -32,8 +31,7 @@ const watchFiles = (callback) => {
   callback();
 };
 
-watch(config.watch.htmlHome, changingMarkupHome);
-watch(config.watch.htmlPages, changingMarkupPages);
+watch(config.watch.html, changingMarkup);
 watch(config.watch.styles, changingStyles);
 watch(config.watch.scripts, changingScripts);
 watch(config.watch.picturesJpg, graphicsOptimizationJpg);

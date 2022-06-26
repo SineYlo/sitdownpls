@@ -18,8 +18,7 @@ const config = {
       `${sourceFolder}/site.webmanifest`,
       `${sourceFolder}/favicon.svg`,
     ],
-    htmlHome: `${sourceFolder}/index.html`,
-    htmlPages: `${sourceFolder}/html/pages/**/*.html`,
+    html: `${sourceFolder}/*.html`,
     styles: [
       `${sourceFolder}/scss/home-styles.scss`,
       `${sourceFolder}/scss/pages/**/*.scss`,
@@ -48,16 +47,7 @@ const config = {
     scripts: `${projectFolder}/js/`,
   },
   watch: {
-    htmlHome: [
-      `${sourceFolder}/index.html`,
-      `${sourceFolder}/html/components/home/**/*.html`,
-      `${sourceFolder}/html/components/global/**/*.html`,
-    ],
-    htmlPages: [
-      `${sourceFolder}/html/pages/**/*.html`,
-      `${sourceFolder}/html/components/pages/**/*.html`,
-      `${sourceFolder}/html/components/global/**/*.html`,
-    ],
+    html: `${sourceFolder}/*.html`,
     audio: `${sourceFolder}/assets/audio/**/*.{mp3,ogg,wav,flac}`,
     video: `${sourceFolder}/assets/video/**/*.{mp4,avi,webm}`,
     docs: `${sourceFolder}/assets/docs/**/*.{pdf,docx,doc,txt,rtf,odt,xls,xlsx}`,

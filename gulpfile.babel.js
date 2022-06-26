@@ -3,10 +3,8 @@
 /* eslint-disable arrow-body-style */
 import { series, parallel } from 'gulp';
 import cleanRoot from './gulp/tasks/_clean-root';
-import changingMarkupHome from './gulp/tasks/_markup-home';
-import changingMarkupPages from './gulp/tasks/_markup-pages';
-import changingMarkupPreCodeHome from './gulp/tasks/_markup-precode-home';
-import changingMarkupPreCodePages from './gulp/tasks/_markup-precode-pages';
+import changingMarkup from './gulp/tasks/_changing-markup';
+import changingMarkupPreCode from './gulp/tasks/_changing-markup-precode';
 import changingStylesBackend from './gulp/tasks/_changing-styles-backend';
 import changingStyles from './gulp/tasks/_changing-styles';
 import changingScriptsBackend from './gulp/tasks/_changing-scripts-backend';
@@ -58,15 +56,13 @@ const graphicsOptimizationAll = series(
 );
 
 const build = parallel(
-  changingMarkupHome,
-  changingMarkupPages,
+  changingMarkup,
   changingStyles,
   changingScripts,
 );
 
 const buildPreCode = parallel(
-  changingMarkupPreCodeHome,
-  changingMarkupPreCodePages,
+  changingMarkupPreCode,
   changingStyles,
   changingScripts,
 );
@@ -74,8 +70,7 @@ const buildPreCode = parallel(
 const buildBackend = series(
   cleanRoot,
   parallel(
-    changingMarkupHome,
-    changingMarkupPages,
+    changingMarkup,
     changingStylesBackend,
     changingScriptsBackend,
   ),
