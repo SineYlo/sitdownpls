@@ -1,0 +1,77 @@
+// stylelint-disable order/order
+.breadcrumbs {
+  &__list {
+    @include list-enum-dereset;
+    @include flex;
+
+    gap: 16px;
+  }
+
+  &__item {
+    line-height: 0;
+  }
+
+  &__link {
+    @include zero-index;
+
+    display: inline-flex;
+    outline: none;
+    font-size: var(--text-size-small);
+    line-height: 1;
+    text-decoration: none;
+    background-color: transparent;
+    transition: color var(--medium-transition-duration) ease-in-out;
+
+    &::after {
+      @include focus-background-fill(-2px, -2px, -2px, -2px, var(--fifth-color-mode));
+
+      content: "";
+    }
+
+    &:not([aria-current="location"]) {
+      color: var(--tenth-other-color);
+    }
+
+    &[aria-current="location"] {
+      @include button-disabled;
+
+      color: var(--third-color-mode);
+
+      &::before {
+        content: "/";
+        position: absolute;
+        left: -9px;
+        top: 0;
+        color: var(--tenth-other-color);
+      }
+    }
+
+    &.focus-visible {
+      color: var(--third-color-mode);
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+
+    @include hover {
+      &:hover {
+        &:not(.focus-visible, [aria-current="location"]) {
+          color: var(--second-color-mode);
+        }
+      }
+    }
+
+    &:active {
+      &:not(.focus-visible, [aria-current="location"]) {
+        color: var(--third-color-mode);
+      }
+    }
+  }
+
+  @include bp-max-576 {
+    display: none;
+  }
+}

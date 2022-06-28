@@ -8,4 +8,14 @@
   &__section {
     margin-bottom: 70px;
   }
+
+  &__container {
+    margin-bottom: 32px;
+  }
+
+  &__wysiwyg {
+    &:not(:last-of-type) {
+      margin-bottom: 32px;
+    }
+  }
 }

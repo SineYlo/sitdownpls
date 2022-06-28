@@ -64,13 +64,21 @@
     <!--#========== CONNECTING THE PRELOADER ==========#-->
     @include("html/components/global/_preloader.html")
     <!--#========== CONNECTING THE SITE HEADER ==========#-->
-    @include("html/components/pages/suppliers/_suppliers-header.html")
+    @include("html/components/pages/suppliers/_site-header.html")
     <!--#========== CONNECTING THE SITE MAIN ==========#-->
     <main class="site-main site-main_indent">
-      <!--#========== CONNECTING THE SECTION | ==========#-->
-      <!-- @include("html/components") -->
+      <!--#========== CONNECTING THE BREADCRUMBS ==========#-->
+      @include("html/components/pages/suppliers/_breadcrumbs.html")
+      <!--#========== CONNECTING THE SECTION | SUPPLIERS ==========#-->
+      @include("html/components/pages/suppliers/_suppliers-section.html")
+      <!--#========== CONNECTING THE SECTION | WHAT YOU GET ==========#-->
+      @include("html/components/pages/suppliers/_what-you-get-section.html")
+      <!--#========== CONNECTING THE SECTION | ADVANTAGES ==========#-->
+      @include("html/components/pages/suppliers/_advantages-section.html")
+      <!--#========== CONNECTING THE SECTION | GUARANTEES ==========#-->
+      @include("html/components/pages/suppliers/_guarantees-section.html")
     </main>
     <!--#========== CONNECTING THE SITE FOOTER ==========#-->
-    @include("html/components/pages/suppliers/_suppliers-footer.html")
+    @include("html/components/pages/suppliers/_site-footer.html")
   </body>
 </html>

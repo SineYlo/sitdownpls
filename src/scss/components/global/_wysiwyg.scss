@@ -1,0 +1,50 @@
+.wysiwyg {
+  * {
+    &:not(div, :last-child, h1) {
+      margin: 0 0 12px;
+    }
+  }
+
+  h1,
+  h2 {
+    font-weight: inherit;
+  }
+
+  h1 {
+    margin: 0 0 32px;
+    font-size: var(--text-size-huge);
+    line-height: 1;
+
+    @include bp-max-576 {
+      font-size: var(--text-size-large);
+    }
+  }
+
+  h2 {
+    font-size: var(--text-size-large);
+    line-height: lh-numeric(24px, 33px);
+
+    @include bp-max-576 {
+      font-size: var(--text-size-base);
+    }
+  }
+
+  ul {
+    @include list-enum-dereset;
+  }
+
+  p {
+    margin: 0;
+    line-height: lh-numeric(16px, 29px);
+    color: var(--eleventh-other-color);
+
+    @include bp-max-576 {
+      font-size: var(--text-size-small);
+      line-height: lh-numeric(14px, 25px);
+    }
+  }
+
+  &__content {
+    max-width: 841px;
+  }
+}

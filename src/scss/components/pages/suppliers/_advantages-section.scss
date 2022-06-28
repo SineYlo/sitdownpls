@@ -1,0 +1,18 @@
+.advantages-section {
+  ol {
+    @include list-enum-dereset;
+  }
+
+  h2 {
+    @include bp-max-576 {
+      font-size: var(--text-size-small);
+    }
+  }
+
+  h3 {
+    font-weight: var(--first-font-weight);
+    font-size: var(--text-size-base);
+    line-height: lh-numeric(16px, 22px);
+    color: var(--first-other-color);
+  }
+}

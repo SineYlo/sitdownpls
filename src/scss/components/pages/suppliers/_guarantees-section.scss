@@ -1,0 +1,60 @@
+.guarantees-section {
+  ol {
+    @include list-enum-dereset;
+
+    counter-reset: numbering;
+  }
+
+  li {
+    @include zero-index;
+
+    padding-left: 26px;
+
+    &::before {
+      counter-increment: numbering;
+      content: counter(numbering) ".";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: var(--first-font-weight);
+      line-height: lh-numeric(16px, 29px);
+      color: var(--first-other-color);
+    }
+  }
+
+  &__inner {
+    margin-bottom: 32px;
+  }
+
+  &__word {
+    white-space: nowrap;
+  }
+
+  &__warranty-period {
+    @include f-ai-center;
+
+    padding: 22px 0 22px 109px;
+    max-width: 624px;
+    background-image: url("../img/pictures/fr-pencil-1920-bg.png");
+    background-position: left center;
+    background-size: 77px 116px;
+    background-repeat: no-repeat;
+
+    p {
+      font-size: var(--text-size-large);
+      line-height: lh-numeric(24px, 36px);
+      color: var(--twelfth-other-color);
+
+      @include bp-max-576 {
+        font-size: var(--text-size-base);
+      }
+    }
+
+    @include bp-max-576 {
+      padding: 0 0 0 52px;
+      min-height: 72px;
+      background-image: url("../img/pictures/fr-pencil-320-bg.png");
+      background-size: 36px 54px;
+    }
+  }
+}

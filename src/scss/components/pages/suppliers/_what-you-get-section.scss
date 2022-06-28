@@ -1,0 +1,28 @@
+.what-you-get-section {
+  ul {
+    max-width: 624px;
+  }
+
+  li {
+    padding-left: 37px;
+    background-position: left top;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+
+    &:nth-child(1) {
+      background-image: url("../img/svg/icon-network-bg.svg");
+    }
+
+    &:nth-child(2) {
+      background-image: url("../img/svg/icon-briefcase-bg.svg");
+    }
+
+    &:nth-child(3) {
+      background-image: url("../img/svg/icon-git-pull-request-bg.svg");
+    }
+  }
+
+  p {
+    line-height: lh-numeric(16px, 24px);
+  }
+}

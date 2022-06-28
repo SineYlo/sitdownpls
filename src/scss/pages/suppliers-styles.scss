@@ -34,8 +34,13 @@
 @import "../components/base/site-header";
 
 // |=============== CONNECTING THE COMPONENTS -> SMALL  | SITE MAIN ===============>
+@import "../components/global/breadcrumbs";
+@import "../components/global/wysiwyg";
 
 // |=============== CONNECTING THE COMPONENTS -> COMMON | SITE MAIN ===============>
+@import "../components/pages/suppliers/what-you-get-section";
+@import "../components/pages/suppliers/advantages-section";
+@import "../components/pages/suppliers/guarantees-section";
 @import "../components/base/site-main";
 
 // |=============== CONNECTING THE COMPONENTS -> SMALL  | SITE FOOTER ===============>
