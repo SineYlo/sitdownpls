@@ -1,0 +1,56 @@
+// |=============== CONNECTING FILES WITH BASIC SETTINGS ===============>
+@import "../config/resets/destyle-mixins";
+@import "../config/variables/global/variables";
+@import "../config/settings/global/settings";
+@import "../config/mixins/global/mixins";
+@import "../config/fonts/global/fonts";
+@import "../config/fonts/pages/catalog/fonts";
+
+// |=============== CONNECTING THE COMPONENTS -> COMMON | BASIC ===============>
+@import "../components/base/site-page";
+@import "../components/base/site-body";
+
+// |=============== CONNECTING THE COMPONENTS -> COMMON | LIBRARIES ===============>
+@import "../components/global/swiper";
+
+// |=============== CONNECTING THE COMPONENTS -> COMMON | PRELOADER ===============>
+@import "../components/global/preloader";
+
+// |=============== CONNECTING THE COMPONENTS -> COMMON | CONTAINER ===============>
+@import "../components/global/container";
+
+// |=============== CONNECTING THE COMPONENTS -> SMALL  | SITE HEADER ===============>
+@import "../components/global/choosing-region";
+@import "../components/global/choosing-category";
+@import "../components/global/navigation-link";
+@import "../components/global/primary-navigation";
+@import "../components/global/additional-navigation";
+@import "../components/global/close-navigation-menu";
+@import "../components/global/search-form";
+@import "../components/global/button-arrow-in-circle";
+@import "../components/global/phone";
+@import "../components/global/burger";
+@import "../components/global/logo-sdp";
+@import "../components/global/user-profile";
+@import "../components/global/shopping-cart";
+@import "../components/global/button";
+
+// |=============== CONNECTING THE COMPONENTS -> COMMON | SITE HEADER ===============>
+@import "../components/base/site-header";
+
+// |=============== CONNECTING THE COMPONENTS -> SMALL  | SITE MAIN ===============>
+@import "../components/global/breadcrumbs";
+
+// |=============== CONNECTING THE COMPONENTS -> COMMON | SITE MAIN ===============>
+@import "../components/base/site-main";
+
+// |=============== CONNECTING THE COMPONENTS -> SMALL  | SITE FOOTER ===============>
+@import "../components/global/trademark";
+@import "../components/global/socials";
+@import "../components/global/navigation-box";
+
+// |=============== CONNECTING THE COMPONENTS -> COMMON | SITE FOOTER ===============>
+@import "../components/base/site-footer";
+
+// |=============== CONNECTING A GLOBAL MEDIA-QUERY THAT DISABLES ANIMATIONS AND EFFECTS ===============>
+@import "../media/global/query-reduced";
