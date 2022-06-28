@@ -8,7 +8,29 @@
   }
 
   &__item {
+    @include zero-index;
+
     line-height: 0;
+
+    &:last-child {
+      color: var(--third-color-mode);
+    }
+
+    &:not(:last-child) {
+      color: var(--tenth-other-color);
+
+      &::before {
+        content: "/";
+        position: absolute;
+        right: -12px;
+        top: 50%;
+        display: inline-block;
+        font-size: var(--text-size-small);
+        line-height: 1;
+        color: var(--tenth-other-color);
+        transform: translateY(-50%);
+      }
+    }
   }
 
   &__link {
@@ -19,37 +41,24 @@
     font-size: var(--text-size-small);
     line-height: 1;
     text-decoration: none;
+    color: inherit;
     background-color: transparent;
     transition: color var(--medium-transition-duration) ease-in-out;
 
-    &::after {
+    &::before {
       @include focus-background-fill(-2px, -2px, -2px, -2px, var(--fifth-color-mode));
 
       content: "";
     }
 
-    &:not([aria-current="location"]) {
-      color: var(--tenth-other-color);
-    }
-
     &[aria-current="location"] {
       @include button-disabled;
-
-      color: var(--third-color-mode);
-
-      &::before {
-        content: "/";
-        position: absolute;
-        left: -9px;
-        top: 0;
-        color: var(--tenth-other-color);
-      }
     }
 
     &.focus-visible {
       color: var(--third-color-mode);
 
-      &::after {
+      &::before {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -58,14 +67,14 @@
 
     @include hover {
       &:hover {
-        &:not(.focus-visible, [aria-current="location"]) {
+        &:not(.focus-visible) {
           color: var(--second-color-mode);
         }
       }
     }
 
     &:active {
-      &:not(.focus-visible, [aria-current="location"]) {
+      &:not(.focus-visible) {
         color: var(--third-color-mode);
       }
     }
