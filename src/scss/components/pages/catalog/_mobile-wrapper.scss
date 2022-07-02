@@ -1,0 +1,13 @@
+.mobile-wrapper {
+  &__title {
+    margin: 0 0 16px;
+
+    @include bp-max-992 {
+      margin-bottom: 27px;
+    }
+
+    @include bp-max-576 {
+      margin-bottom: 16px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.oxford-card {
+  &__image {
+    @include img-dereset;
+  }
+
+  &__content {
+    border-radius: 0 0 var(--second-br) var(--second-br);
+    padding: 33px 30px 30px;
+    background-color: var(--twelfth-other-color);
+  }
+
+  &__title {
+    margin: 0;
+    font-size: var(--text-size-large);
+    line-height: lh-numeric(24px, 32px);
+  }
+
+  &__description {
+    margin: -4px 0 13px;
+    max-width: 200px;
+    line-height: lh-numeric(16px, 22px);
+    color: var(--tenth-other-color);
+  }
+}

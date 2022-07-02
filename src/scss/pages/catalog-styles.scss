@@ -40,8 +40,25 @@
 
 // |=============== CONNECTING THE COMPONENTS -> SMALL  | SITE MAIN ===============>
 @import "../components/global/breadcrumbs";
+@import "../components/global/title";
+@import "../components/global/product-card";
+@import "../components/global/product-rating";
+@import "../components/global/default-price";
+@import "../components/global/filter-custom-checkbox";
+@import "../components/global/range-box";
+@import "../components/global/price-range";
+@import "../components/global/link-arrow-in-circle";
+@import "../components/global/oxford-title";
+@import "../components/global/oxford-card";
 
 // |=============== CONNECTING THE COMPONENTS -> COMMON | SITE MAIN ===============>
+@import "../components/pages/catalog/filter-dropdown";
+@import "../components/pages/catalog/mobile-filters";
+@import "../components/pages/catalog/mobile-wrapper";
+@import "../components/pages/catalog/filters-box";
+@import "../components/pages/catalog/desktop-filters";
+@import "../components/pages/catalog/desktop-wrapper";
+@import "../components/pages/catalog/catalog-section";
 @import "../components/base/site-main";
 
 // |=============== CONNECTING THE COMPONENTS -> SMALL  | SITE FOOTER ===============>

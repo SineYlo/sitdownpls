@@ -1,0 +1,47 @@
+.price-range {
+  @include f-ai-center;
+
+  &__text {
+    margin-right: 10px;
+    line-height: lh-numeric(16px, 21px);
+    color: var(--eleventh-other-color);
+  }
+
+  &__field {
+    @include field-number-dereset;
+
+    -webkit-appearance: none;
+    appearance: none;
+    vertical-align: middle;
+    margin: 0;
+    outline: none;
+    border: 1px solid var(--tenth-other-color);
+    border-radius: var(--first-br);
+    padding: 0 0 0 12px;
+    width: 86px;
+    height: 30px;
+    font: inherit;
+    text-align: inherit;
+    text-transform: inherit;
+    color: inherit;
+    background: transparent;
+    transition-property: border-color, background-color;
+    transition-duration: var(--medium-transition-duration);
+    transition-timing-function: ease-in-out;
+
+    &.focus-visible {
+      border-color: var(--first-color-mode);
+      background-color: var(--fifth-color-mode);
+    }
+
+    @include hover {
+      &:hover {
+        border-color: var(--first-color-mode);
+      }
+    }
+
+    &:active {
+      border-color: var(--third-color-mode);
+    }
+  }
+}

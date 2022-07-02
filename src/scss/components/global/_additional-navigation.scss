@@ -21,7 +21,7 @@
     @include list-enum-dereset;
 
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
 
     @include bp-max-830 {
       gap: 10px;

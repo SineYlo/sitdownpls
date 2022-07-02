@@ -1,0 +1,20 @@
+.filters-box {
+  &__title {
+    margin: 0 0 10px;
+    font-size: var(--text-size-base);
+    line-height: lh-numeric(16px, 21px);
+    color: var(--eleventh-other-color);
+
+    &_indent {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__list {
+    @include list-enum-dereset;
+    @include flex;
+
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}

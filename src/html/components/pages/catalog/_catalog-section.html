@@ -1,0 +1,911 @@
+<section class="catalog-section" aria-label="Вы находитесь в секции - каталог">
+  <div class="container">
+    <div class="mobile-wrapper catalog-section__mobile-wrapper">
+      <h1 class="title mobile-wrapper__title title_size_m title_lh_m">
+        Каталог
+      </h1>
+      <div class="mobile-filters">
+        <h2 class="mobile-filters__title">
+          Фильтры:
+        </h2>
+        <ul class="mobile-filters__list">
+          <li class="filter-dropdown mobile-filters__filter-dropdown">
+            <button class="filter-dropdown__button" type="button" aria-controls="category-dropdown" aria-expanded="false">
+              Категория
+            </button>
+            <ul class="filter-dropdown__list" id="category-dropdown">
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="categorySofas" value="yes" checked>
+                  <span class="filter-custom-checkbox__text">
+                    Диваны
+                  </span>
+                </label>
+              </li>
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="categoryArmchairs" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Кресла
+                  </span>
+                </label>
+              </li>
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="categoryPoufs" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Пуфы
+                  </span>
+                </label>
+              </li>
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="categoryBeds" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Кровати
+                  </span>
+                </label>
+              </li>
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="categoryCurbstones" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Тумбы
+                  </span>
+                </label>
+              </li>
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="categoryDressers" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Комоды
+                  </span>
+                </label>
+              </li>
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="categoryChairs" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Стулья
+                  </span>
+                </label>
+              </li>
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="categoryTables" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Столы
+                  </span>
+                </label>
+              </li>
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="categoryAccessories" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Аксессуары
+                  </span>
+                </label>
+              </li>
+            </ul>
+          </li>
+          <li class="filter-dropdown mobile-filters__filter-dropdown">
+            <button class="filter-dropdown__button" type="button" aria-controls="price-dropdown" aria-expanded="false">
+              Цена
+            </button>
+            <ul class="filter-dropdown__list" id="price-dropdown">
+              <li class="filter-dropdown__item">
+                <label class="price-range">
+                  <span class="price-range__text">
+                    от
+                  </span>
+                  <input class="price-range__field" type="number" name="priceFrom" min="2000" max="150000" placeholder="2000">
+                </label>
+              </li>
+              <li class="filter-dropdown__item">
+                <label class="price-range">
+                  <span class="price-range__text price-range__text_to">
+                    до
+                  </span>
+                  <input class="price-range__field" type="number" name="priceTo" min="2000" max="150000" placeholder="150000">
+                </label>
+              </li>
+            </ul>
+          </li>
+          <li class="filter-dropdown mobile-filters__filter-dropdown">
+            <button class="filter-dropdown__button" type="button" aria-controls="discount-dropdown" aria-expanded="false">
+              Скидка
+            </button>
+            <ul class="filter-dropdown__list" id="discount-dropdown">
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="discountMoreThan5000" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    <span class="filter-custom-checkbox__text-word">Более</span> <span class="filter-custom-checkbox__text-symbol">&gt;</span> 5&nbsp;000
+                  </span>
+                </label>
+              </li>
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="discountLessThan5000" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    <span class="filter-custom-checkbox__text-word">Менее</span> <span class="filter-custom-checkbox__text-symbol">&lt;</span> 5&nbsp;000
+                  </span>
+                </label>
+              </li>
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="discountNeverMind" value="yes" checked>
+                  <span class="filter-custom-checkbox__text">
+                    Не&nbsp;важно
+                  </span>
+                </label>
+              </li>
+            </ul>
+          </li>
+          <li class="filter-dropdown mobile-filters__filter-dropdown">
+            <button class="filter-dropdown__button" type="button" aria-controls="color-dropdown" aria-expanded="false">
+              Цвет
+            </button>
+            <ul class="filter-dropdown__list" id="color-dropdown">
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="colorBrown" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Коричневый
+                  </span>
+                </label>
+              </li>
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="colorBlack" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Черный
+                  </span>
+                </label>
+              </li>
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="colorBeige" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Бежевый
+                  </span>
+                </label>
+              </li>
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="colorGray" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Серый
+                  </span>
+                </label>
+              </li>
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="colorWhite" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Белый
+                  </span>
+                </label>
+              </li>
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="colorBlue" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Синий
+                  </span>
+                </label>
+              </li>
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="colorOrange" value="yes" checked>
+                  <span class="filter-custom-checkbox__text">
+                    Оранжевый
+                  </span>
+                </label>
+              </li>
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="colorYellow" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Желтый
+                  </span>
+                </label>
+              </li>
+              <li class="filter-dropdown__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="colorGreen" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Зеленый
+                  </span>
+                </label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="desktop-wrapper catalog-section__desktop-wrapper">
+      <div class="desktop-wrapper__box">
+        <div class="desktop-filters desktop-wrapper__desktop-filters">
+          <h2 class="title desktop-filters__title title_size_s">
+            Фильтровать&nbsp;по:
+          </h2>
+          <div class="filters-box desktop-filters__filters-box">
+            <h3 class="filters-box__title">
+              Категория
+            </h3>
+            <ul class="filters-box__list">
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="categorySofas" value="yes" checked>
+                  <span class="filter-custom-checkbox__text">
+                    Диваны
+                  </span>
+                </label>
+              </li>
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="categoryArmchairs" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Кресла
+                  </span>
+                </label>
+              </li>
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="categoryPoufs" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Пуфы
+                  </span>
+                </label>
+              </li>
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="categoryBeds" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Кровати
+                  </span>
+                </label>
+              </li>
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="categoryCurbstones" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Тумбы
+                  </span>
+                </label>
+              </li>
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="categoryDressers" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Комоды
+                  </span>
+                </label>
+              </li>
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="categoryChairs" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Стулья
+                  </span>
+                </label>
+              </li>
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="categoryTables" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Столы
+                  </span>
+                </label>
+              </li>
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="categoryAccessories" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Аксессуары
+                  </span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="filters-box desktop-filters__filters-box">
+            <h3 class="filters-box__title filters-box__title_indent">
+              Цена
+            </h3>
+            <div class="range-box">
+              <div class="range-box__inner">
+                <label class="price-range">
+                  <span class="price-range__text">
+                    от
+                  </span>
+                  <input class="price-range__field price-range__field_first" type="number" name="priceFrom" min="2000" max="150000" placeholder="2000">
+                </label>
+                <label class="price-range">
+                  <span class="price-range__text">
+                    до
+                  </span>
+                  <input class="price-range__field price-range__field_second" type="number" name="priceTo" min="2000" max="150000" placeholder="150000">
+                </label>
+              </div>
+              <div class="range-box__slider"></div>
+            </div>
+          </div>
+          <div class="filters-box desktop-filters__filters-box">
+            <h3 class="filters-box__title">
+              Скидка
+            </h3>
+            <ul class="filters-box__list">
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="discountMoreThan5000" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Более 5&nbsp;000
+                  </span>
+                </label>
+              </li>
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="discountLessThan5000" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Менее 5&nbsp;000
+                  </span>
+                </label>
+              </li>
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="discountNeverMind" value="yes" checked>
+                  <span class="filter-custom-checkbox__text">
+                    Не&nbsp;важно
+                  </span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="filters-box desktop-filters__filters-box">
+            <h3 class="filters-box__title">
+              Цвет
+            </h3>
+            <ul class="filters-box__list">
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="colorBrown" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Коричневый
+                  </span>
+                </label>
+              </li>
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="colorBlack" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Черный
+                  </span>
+                </label>
+              </li>
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="colorBeige" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Бежевый
+                  </span>
+                </label>
+              </li>
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="colorGray" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Серый
+                  </span>
+                </label>
+              </li>
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="colorWhite" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Белый
+                  </span>
+                </label>
+              </li>
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="colorBlue" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Синий
+                  </span>
+                </label>
+              </li>
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="colorOrange" value="yes" checked>
+                  <span class="filter-custom-checkbox__text">
+                    Оранжевый
+                  </span>
+                </label>
+              </li>
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="colorYellow" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Желтый
+                  </span>
+                </label>
+              </li>
+              <li class="filters-box__item">
+                <label class="filter-custom-checkbox">
+                  <input class="filter-custom-checkbox__field" type="checkbox" name="colorGreen" value="yes">
+                  <span class="filter-custom-checkbox__text">
+                    Зеленый
+                  </span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <article class="oxford-card desktop-wrapper__oxford-card">
+          <img class="oxford-card__image" src="img/pictures/fr-oxford-chairs-1920.png" width="296" height="190" decoding="async" loading="lazy" alt="Коричневые кожаные кресла с подушками">
+          <div class="oxford-card__content">
+            <h2 class="oxford-title oxford-card__title">
+              Оксфорд 1950
+            </h2>
+            <p class="oxford-card__description">
+              Новая коллекция изысканных кресел
+            </p>
+            <a class="link-arrow-in-circle oxford-card__link" href="#no-scrolling">
+              <span class="link-arrow-in-circle__text">
+                В&nbsp;каталог
+              </span>
+              <span class="link-arrow-in-circle__icon">
+                <svg class="link-arrow-in-circle__svg" width="7" height="10" aria-hidden="true">
+                  <use xlink:href="img/sprites/sprite.svg#icon-thick-right-arrow" />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </article>
+      </div>
+      <div class="desktop-wrapper__inner">
+        <h1 class="title desktop-wrapper__title title_size_m title_lh_m">
+          Каталог
+        </h1>
+        <div class="swiper">
+          <ul class="swiper-wrapper">
+            <li class="product-card swiper-slide">
+              <article class="product-card__content">
+                <span class="product-rating product-card__product-rating">
+                  5,0
+                </span>
+                <picture class="product-card__picture">
+                  <source srcset="img/pictures/fr-leather-sofa-r-94-320.avif, img/pictures/fr-leather-sofa-r-94-320@2x.avif 2x, img/pictures/fr-leather-sofa-r-94-320@3x.avif 3x" media="(max-width: 36em)" type="image/avif">
+                  <source srcset="img/pictures/fr-leather-sofa-r-94-320.webp, img/pictures/fr-leather-sofa-r-94-320@2x.webp 2x, img/pictures/fr-leather-sofa-r-94-320@3x.webp 3x" media="(max-width: 36em)" type="image/webp">
+                  <source srcset="img/pictures/fr-leather-sofa-r-94-320.png, img/pictures/fr-leather-sofa-r-94-320@2x.png 2x, img/pictures/fr-leather-sofa-r-94-320@3x.png 3x" media="(max-width: 36em)">
+                  <source srcset="img/pictures/fr-leather-sofa-r-94-1920.avif, img/pictures/fr-leather-sofa-r-94-1920@2x.avif 2x, img/pictures/fr-leather-sofa-r-94-1920@3x.avif 3x" type="image/avif">
+                  <source srcset="img/pictures/fr-leather-sofa-r-94-1920.webp, img/pictures/fr-leather-sofa-r-94-1920@2x.webp 2x, img/pictures/fr-leather-sofa-r-94-1920@3x.webp 3x" type="image/webp">
+                  <img class="product-card__image" src="img/pictures/fr-leather-sofa-r-94-1920.png" srcset="img/pictures/fr-leather-sofa-r-94-1920@2x.png 2x, img/pictures/fr-leather-sofa-r-94-1920@3x.png 3x" width="266" height="82" decoding="async" loading="lazy" alt="Диван кожаный R-94">
+                </picture>
+                <h2 class="title product-card__title product-card__title_size_min title_size_m title_lh_m">
+                  Диван кожаный <span class="product-card__model-number">“R-94”</span>
+                </h2>
+                <span class="default-price product-card__default-price">
+                  94&nbsp;990 руб
+                </span>
+                <a class="button product-card__button button_stroke" href="#no-scrolling">
+                  Купить
+                </a>
+              </article>
+            </li>
+            <li class="product-card swiper-slide">
+              <article class="product-card__content">
+                <span class="product-rating product-card__product-rating">
+                  4,9
+                </span>
+                <picture class="product-card__picture">
+                  <source srcset="img/pictures/fr-apartheid-sofa-t-75-320.avif, img/pictures/fr-apartheid-sofa-t-75-320@2x.avif 2x, img/pictures/fr-apartheid-sofa-t-75-320@3x.avif 3x" media="(max-width: 36em)" type="image/avif">
+                  <source srcset="img/pictures/fr-apartheid-sofa-t-75-320.webp, img/pictures/fr-apartheid-sofa-t-75-320@2x.webp 2x, img/pictures/fr-apartheid-sofa-t-75-320@3x.webp 3x" media="(max-width: 36em)" type="image/webp">
+                  <source srcset="img/pictures/fr-apartheid-sofa-t-75-320.png, img/pictures/fr-apartheid-sofa-t-75-320@2x.png 2x, img/pictures/fr-apartheid-sofa-t-75-320@3x.png 3x" media="(max-width: 36em)">
+                  <source srcset="img/pictures/fr-apartheid-sofa-t-75-1920.avif, img/pictures/fr-apartheid-sofa-t-75-1920@2x.avif 2x, img/pictures/fr-apartheid-sofa-t-75-1920@3x.avif 3x" type="image/avif">
+                  <source srcset="img/pictures/fr-apartheid-sofa-t-75-1920.webp, img/pictures/fr-apartheid-sofa-t-75-1920@2x.webp 2x, img/pictures/fr-apartheid-sofa-t-75-1920@3x.webp 3x" type="image/webp">
+                  <img class="product-card__image" src="img/pictures/fr-apartheid-sofa-t-75-1920.png" srcset="img/pictures/fr-apartheid-sofa-t-75-1920@2x.png 2x, img/pictures/fr-apartheid-sofa-t-75-1920@3x.png 3x" width="261" height="101" decoding="async" loading="lazy" alt="Диван апартековый T-75">
+                </picture>
+                <h2 class="title product-card__title title_size_m title_lh_m">
+                  Диван апартековый <span class="product-card__model-number">“T-75”</span>
+                </h2>
+                <span class="default-price product-card__default-price">
+                  69&nbsp;990 руб
+                </span>
+                <a class="button product-card__button button_stroke" href="#no-scrolling">
+                  Купить
+                </a>
+              </article>
+            </li>
+            <li class="product-card swiper-slide">
+              <article class="product-card__content">
+                <span class="product-rating product-card__product-rating">
+                  4,8
+                </span>
+                <picture class="product-card__picture">
+                  <source srcset="img/pictures/fr-fabric-sofa-d-31-320.avif, img/pictures/fr-fabric-sofa-d-31-320@2x.avif 2x, img/pictures/fr-fabric-sofa-d-31-320@3x.avif 3x" media="(max-width: 36em)" type="image/avif">
+                  <source srcset="img/pictures/fr-fabric-sofa-d-31-320.webp, img/pictures/fr-fabric-sofa-d-31-320@2x.webp 2x, img/pictures/fr-fabric-sofa-d-31-320@3x.webp 3x" media="(max-width: 36em)" type="image/webp">
+                  <source srcset="img/pictures/fr-fabric-sofa-d-31-320.png, img/pictures/fr-fabric-sofa-d-31-320@2x.png 2x, img/pictures/fr-fabric-sofa-d-31-320@3x.png 3x" media="(max-width: 36em)">
+                  <source srcset="img/pictures/fr-fabric-sofa-d-31-1920.avif, img/pictures/fr-fabric-sofa-d-31-1920@2x.avif 2x, img/pictures/fr-fabric-sofa-d-31-1920@3x.avif 3x" type="image/avif">
+                  <source srcset="img/pictures/fr-fabric-sofa-d-31-1920.webp, img/pictures/fr-fabric-sofa-d-31-1920@2x.webp 2x, img/pictures/fr-fabric-sofa-d-31-1920@3x.webp 3x" type="image/webp">
+                  <img class="product-card__image" src="img/pictures/fr-fabric-sofa-d-31-1920.png" srcset="img/pictures/fr-fabric-sofa-d-31-1920@2x.png 2x, img/pictures/fr-fabric-sofa-d-31-1920@3x.png 3x" width="262" height="103" decoding="async" loading="lazy" alt="Диван тканевый D-31">
+                </picture>
+                <h2 class="title product-card__title product-card__title_size_min title_size_m title_lh_m">
+                  Диван тканевый <span class="product-card__model-number">“D-31”</span>
+                </h2>
+                <span class="default-price product-card__default-price">
+                  28&nbsp;490 руб
+                </span>
+                <a class="button product-card__button button_stroke" href="product-card.html">
+                  Купить
+                </a>
+              </article>
+            </li>
+            <li class="product-card swiper-slide">
+              <article class="product-card__content">
+                <span class="product-rating product-card__product-rating">
+                  4,8
+                </span>
+                <picture class="product-card__picture">
+                  <source srcset="img/pictures/fr-velour-sofa-y-68-320.avif, img/pictures/fr-velour-sofa-y-68-320@2x.avif 2x, img/pictures/fr-velour-sofa-y-68-320@3x.avif 3x" media="(max-width: 36em)" type="image/avif">
+                  <source srcset="img/pictures/fr-velour-sofa-y-68-320.webp, img/pictures/fr-velour-sofa-y-68-320@2x.webp 2x, img/pictures/fr-velour-sofa-y-68-320@3x.webp 3x" media="(max-width: 36em)" type="image/webp">
+                  <source srcset="img/pictures/fr-velour-sofa-y-68-320.png, img/pictures/fr-velour-sofa-y-68-320@2x.png 2x, img/pictures/fr-velour-sofa-y-68-320@3x.png 3x" media="(max-width: 36em)">
+                  <source srcset="img/pictures/fr-velour-sofa-y-68-1920.avif, img/pictures/fr-velour-sofa-y-68-1920@2x.avif 2x, img/pictures/fr-velour-sofa-y-68-1920@3x.avif 3x" type="image/avif">
+                  <source srcset="img/pictures/fr-velour-sofa-y-68-1920.webp, img/pictures/fr-velour-sofa-y-68-1920@2x.webp 2x, img/pictures/fr-velour-sofa-y-68-1920@3x.webp 3x" type="image/webp">
+                  <img class="product-card__image" src="img/pictures/fr-velour-sofa-y-68-1920.png" srcset="img/pictures/fr-velour-sofa-y-68-1920@2x.png 2x, img/pictures/fr-velour-sofa-y-68-1920@3x.png 3x" width="257" height="125" decoding="async" loading="lazy" alt="Диван велюровый Y-68">
+                </picture>
+                <h2 class="title product-card__title product-card__title_size_min title_size_m title_lh_m">
+                  Диван велюровый <span class="product-card__model-number">“Y-68”</span>
+                </h2>
+                <span class="default-price product-card__default-price">
+                  22&nbsp;990 руб
+                </span>
+                <a class="button product-card__button button_stroke" href="#no-scrolling">
+                  Купить
+                </a>
+              </article>
+            </li>
+            <li class="product-card swiper-slide">
+              <article class="product-card__content">
+                <span class="product-rating product-card__product-rating">
+                  4,8
+                </span>
+                <picture class="product-card__picture">
+                  <source srcset="img/pictures/fr-shinil-sofa-w-95-320.avif, img/pictures/fr-shinil-sofa-w-95-320@2x.avif 2x, img/pictures/fr-shinil-sofa-w-95-320@3x.avif 3x" media="(max-width: 36em)" type="image/avif">
+                  <source srcset="img/pictures/fr-shinil-sofa-w-95-320.webp, img/pictures/fr-shinil-sofa-w-95-320@2x.webp 2x, img/pictures/fr-shinil-sofa-w-95-320@3x.webp 3x" media="(max-width: 36em)" type="image/webp">
+                  <source srcset="img/pictures/fr-shinil-sofa-w-95-320.png, img/pictures/fr-shinil-sofa-w-95-320@2x.png 2x, img/pictures/fr-shinil-sofa-w-95-320@3x.png 3x" media="(max-width: 36em)">
+                  <source srcset="img/pictures/fr-shinil-sofa-w-95-1920.avif, img/pictures/fr-shinil-sofa-w-95-1920@2x.avif 2x, img/pictures/fr-shinil-sofa-w-95-1920@3x.avif 3x" type="image/avif">
+                  <source srcset="img/pictures/fr-shinil-sofa-w-95-1920.webp, img/pictures/fr-shinil-sofa-w-95-1920@2x.webp 2x, img/pictures/fr-shinil-sofa-w-95-1920@3x.webp 3x" type="image/webp">
+                  <img class="product-card__image" src="img/pictures/fr-shinil-sofa-w-95-1920.png" srcset="img/pictures/fr-shinil-sofa-w-95-1920@2x.png 2x, img/pictures/fr-shinil-sofa-w-95-1920@3x.png 3x" width="265" height="117" decoding="async" loading="lazy" alt="Диван из шинила W-95">
+                </picture>
+                <h2 class="title product-card__title product-card__title_size_min title_size_m title_lh_m">
+                  Диван из&nbsp;шинила <span class="product-card__model-number">“W-95”</span>
+                </h2>
+                <span class="default-price product-card__default-price">
+                  22&nbsp;990 руб
+                </span>
+                <a class="button product-card__button button_stroke" href="#no-scrolling">
+                  Купить
+                </a>
+              </article>
+            </li>
+            <li class="product-card swiper-slide">
+              <article class="product-card__content">
+                <span class="product-rating product-card__product-rating">
+                  4,8
+                </span>
+                <picture class="product-card__picture">
+                  <source srcset="img/pictures/fr-flocked-sofa-g-41-320.avif, img/pictures/fr-flocked-sofa-g-41-320@2x.avif 2x, img/pictures/fr-flocked-sofa-g-41-320@3x.avif 3x" media="(max-width: 36em)" type="image/avif">
+                  <source srcset="img/pictures/fr-flocked-sofa-g-41-320.webp, img/pictures/fr-flocked-sofa-g-41-320@2x.webp 2x, img/pictures/fr-flocked-sofa-g-41-320@3x.webp 3x" media="(max-width: 36em)" type="image/webp">
+                  <source srcset="img/pictures/fr-flocked-sofa-g-41-320.png, img/pictures/fr-flocked-sofa-g-41-320@2x.png 2x, img/pictures/fr-flocked-sofa-g-41-320@3x.png 3x" media="(max-width: 36em)">
+                  <source srcset="img/pictures/fr-flocked-sofa-g-41-1920.avif, img/pictures/fr-flocked-sofa-g-41-1920@2x.avif 2x, img/pictures/fr-flocked-sofa-g-41-1920@3x.avif 3x" type="image/avif">
+                  <source srcset="img/pictures/fr-flocked-sofa-g-41-1920.webp, img/pictures/fr-flocked-sofa-g-41-1920@2x.webp 2x, img/pictures/fr-flocked-sofa-g-41-1920@3x.webp 3x" type="image/webp">
+                  <img class="product-card__image" src="img/pictures/fr-flocked-sofa-g-41-1920.png" srcset="img/pictures/fr-flocked-sofa-g-41-1920@2x.png 2x, img/pictures/fr-flocked-sofa-g-41-1920@3x.png 3x" width="271" height="117" decoding="async" loading="lazy" alt="Диван флоковый G-41">
+                </picture>
+                <h2 class="title product-card__title product-card__title_size_min title_size_m title_lh_m">
+                  Диван флоковый <span class="product-card__model-number">“G-41”</span>
+                </h2>
+                <span class="default-price product-card__default-price">
+                  17&nbsp;990 руб
+                </span>
+                <a class="button product-card__button button_stroke" href="#no-scrolling">
+                  Купить
+                </a>
+              </article>
+            </li>
+            <li class="product-card swiper-slide">
+              <article class="product-card__content">
+                <span class="product-rating product-card__product-rating">
+                  4,8
+                </span>
+                <picture class="product-card__picture">
+                  <source srcset="img/pictures/fr-shinil-sofa-v-43-320.avif, img/pictures/fr-shinil-sofa-v-43-320@2x.avif 2x, img/pictures/fr-shinil-sofa-v-43-320@3x.avif 3x" media="(max-width: 36em)" type="image/avif">
+                  <source srcset="img/pictures/fr-shinil-sofa-v-43-320.webp, img/pictures/fr-shinil-sofa-v-43-320@2x.webp 2x, img/pictures/fr-shinil-sofa-v-43-320@3x.webp 3x" media="(max-width: 36em)" type="image/webp">
+                  <source srcset="img/pictures/fr-shinil-sofa-v-43-320.png, img/pictures/fr-shinil-sofa-v-43-320@2x.png 2x, img/pictures/fr-shinil-sofa-v-43-320@3x.png 3x" media="(max-width: 36em)">
+                  <source srcset="img/pictures/fr-shinil-sofa-v-43-1920.avif, img/pictures/fr-shinil-sofa-v-43-1920@2x.avif 2x, img/pictures/fr-shinil-sofa-v-43-1920@3x.avif 3x" type="image/avif">
+                  <source srcset="img/pictures/fr-shinil-sofa-v-43-1920.webp, img/pictures/fr-shinil-sofa-v-43-1920@2x.webp 2x, img/pictures/fr-shinil-sofa-v-43-1920@3x.webp 3x" type="image/webp">
+                  <img class="product-card__image" src="img/pictures/fr-shinil-sofa-v-43-1920.png" srcset="img/pictures/fr-shinil-sofa-v-43-1920@2x.png 2x, img/pictures/fr-shinil-sofa-v-43-1920@3x.png 3x" width="266" height="130" decoding="async" loading="lazy" alt="Диван шиниловый V-43">
+                </picture>
+                <h2 class="title product-card__title title_size_m title_lh_m">
+                  Диван шиниловый <span class="product-card__model-number">“V-43”</span>
+                </h2>
+                <span class="default-price product-card__default-price">
+                  19&nbsp;990 руб
+                </span>
+                <a class="button product-card__button button_stroke" href="#no-scrolling">
+                  Купить
+                </a>
+              </article>
+            </li>
+            <li class="product-card swiper-slide">
+              <article class="product-card__content">
+                <span class="product-rating product-card__product-rating">
+                  4,7
+                </span>
+                <picture class="product-card__picture">
+                  <source srcset="img/pictures/fr-velour-sofa-s-99-320.avif, img/pictures/fr-velour-sofa-s-99-320@2x.avif 2x, img/pictures/fr-velour-sofa-s-99-320@3x.avif 3x" media="(max-width: 36em)" type="image/avif">
+                  <source srcset="img/pictures/fr-velour-sofa-s-99-320.webp, img/pictures/fr-velour-sofa-s-99-320@2x.webp 2x, img/pictures/fr-velour-sofa-s-99-320@3x.webp 3x" media="(max-width: 36em)" type="image/webp">
+                  <source srcset="img/pictures/fr-velour-sofa-s-99-320.png, img/pictures/fr-velour-sofa-s-99-320@2x.png 2x, img/pictures/fr-velour-sofa-s-99-320@3x.png 3x" media="(max-width: 36em)">
+                  <source srcset="img/pictures/fr-velour-sofa-s-99-1920.avif, img/pictures/fr-velour-sofa-s-99-1920@2x.avif 2x, img/pictures/fr-velour-sofa-s-99-1920@3x.avif 3x" type="image/avif">
+                  <source srcset="img/pictures/fr-velour-sofa-s-99-1920.webp, img/pictures/fr-velour-sofa-s-99-1920@2x.webp 2x, img/pictures/fr-velour-sofa-s-99-1920@3x.webp 3x" type="image/webp">
+                  <img class="product-card__image" src="img/pictures/fr-velour-sofa-s-99-1920.png" srcset="img/pictures/fr-velour-sofa-s-99-1920@2x.png 2x, img/pictures/fr-velour-sofa-s-99-1920@3x.png 3x" width="212" height="124" decoding="async" loading="lazy" alt="Диван велюровый S-99">
+                </picture>
+                <h2 class="title product-card__title product-card__title_size_min title_size_m title_lh_m">
+                  Диван велюровый <span class="product-card__model-number">“S-99”</span>
+                </h2>
+                <span class="default-price product-card__default-price">
+                  19&nbsp;990 руб
+                </span>
+                <a class="button product-card__button button_stroke" href="#no-scrolling">
+                  Купить
+                </a>
+              </article>
+            </li>
+            <li class="product-card swiper-slide">
+              <article class="product-card__content">
+                <span class="product-rating product-card__product-rating">
+                  4,7
+                </span>
+                <picture class="product-card__picture">
+                  <source srcset="img/pictures/fr-leatherette-sofa-f-85-320.avif, img/pictures/fr-leatherette-sofa-f-85-320@2x.avif 2x, img/pictures/fr-leatherette-sofa-f-85-320@3x.avif 3x" media="(max-width: 36em)" type="image/avif">
+                  <source srcset="img/pictures/fr-leatherette-sofa-f-85-320.webp, img/pictures/fr-leatherette-sofa-f-85-320@2x.webp 2x, img/pictures/fr-leatherette-sofa-f-85-320@3x.webp 3x" media="(max-width: 36em)" type="image/webp">
+                  <source srcset="img/pictures/fr-leatherette-sofa-f-85-320.png, img/pictures/fr-leatherette-sofa-f-85-320@2x.png 2x, img/pictures/fr-leatherette-sofa-f-85-320@3x.png 3x" media="(max-width: 36em)">
+                  <source srcset="img/pictures/fr-leatherette-sofa-f-85-1920.avif, img/pictures/fr-leatherette-sofa-f-85-1920@2x.avif 2x, img/pictures/fr-leatherette-sofa-f-85-1920@3x.avif 3x" type="image/avif">
+                  <source srcset="img/pictures/fr-leatherette-sofa-f-85-1920.webp, img/pictures/fr-leatherette-sofa-f-85-1920@2x.webp 2x, img/pictures/fr-leatherette-sofa-f-85-1920@3x.webp 3x" type="image/webp">
+                  <img class="product-card__image" src="img/pictures/fr-leatherette-sofa-f-85-1920.png" srcset="img/pictures/fr-leatherette-sofa-f-85-1920@2x.png 2x, img/pictures/fr-leatherette-sofa-f-85-1920@3x.png 3x" width="262" height="125" decoding="async" loading="lazy" alt="Диван из кожзама F-85">
+                </picture>
+                <h2 class="title product-card__title product-card__title_size_min title_size_m title_lh_m">
+                  Диван из&nbsp;кожзама <span class="product-card__model-number">“F-85”</span>
+                </h2>
+                <span class="default-price product-card__default-price">
+                  26&nbsp;990 руб
+                </span>
+                <a class="button product-card__button button_stroke" href="#no-scrolling">
+                  Купить
+                </a>
+              </article>
+            </li>
+            <li class="product-card swiper-slide">
+              <article class="product-card__content">
+                <span class="product-rating product-card__product-rating">
+                  4,6
+                </span>
+                <picture class="product-card__picture">
+                  <source srcset="img/pictures/fr-flocked-sofa-h-64-320.avif, img/pictures/fr-flocked-sofa-h-64-320@2x.avif 2x, img/pictures/fr-flocked-sofa-h-64-320@3x.avif 3x" media="(max-width: 36em)" type="image/avif">
+                  <source srcset="img/pictures/fr-flocked-sofa-h-64-320.webp, img/pictures/fr-flocked-sofa-h-64-320@2x.webp 2x, img/pictures/fr-flocked-sofa-h-64-320@3x.webp 3x" media="(max-width: 36em)" type="image/webp">
+                  <source srcset="img/pictures/fr-flocked-sofa-h-64-320.png, img/pictures/fr-flocked-sofa-h-64-320@2x.png 2x, img/pictures/fr-flocked-sofa-h-64-320@3x.png 3x" media="(max-width: 36em)">
+                  <source srcset="img/pictures/fr-flocked-sofa-h-64-1920.avif, img/pictures/fr-flocked-sofa-h-64-1920@2x.avif 2x, img/pictures/fr-flocked-sofa-h-64-1920@3x.avif 3x" type="image/avif">
+                  <source srcset="img/pictures/fr-flocked-sofa-h-64-1920.webp, img/pictures/fr-flocked-sofa-h-64-1920@2x.webp 2x, img/pictures/fr-flocked-sofa-h-64-1920@3x.webp 3x" type="image/webp">
+                  <img class="product-card__image" src="img/pictures/fr-flocked-sofa-h-64-1920.png" srcset="img/pictures/fr-flocked-sofa-h-64-1920@2x.png 2x, img/pictures/fr-flocked-sofa-h-64-1920@3x.png 3x" width="251" height="130" decoding="async" loading="lazy" alt="Диван флоковый H-64">
+                </picture>
+                <h2 class="title product-card__title product-card__title_size_min title_size_m title_lh_m">
+                  Диван флоковый <span class="product-card__model-number">“H-64”</span>
+                </h2>
+                <span class="default-price product-card__default-price">
+                  25&nbsp;990 руб
+                </span>
+                <a class="button product-card__button button_stroke" href="#no-scrolling">
+                  Купить
+                </a>
+              </article>
+            </li>
+            <li class="product-card swiper-slide">
+              <article class="product-card__content">
+                <span class="product-rating product-card__product-rating">
+                  4,6
+                </span>
+                <picture class="product-card__picture">
+                  <source srcset="img/pictures/fr-flocked-sofa-h-58-320.avif, img/pictures/fr-flocked-sofa-h-58-320@2x.avif 2x, img/pictures/fr-flocked-sofa-h-58-320@3x.avif 3x" media="(max-width: 36em)" type="image/avif">
+                  <source srcset="img/pictures/fr-flocked-sofa-h-58-320.webp, img/pictures/fr-flocked-sofa-h-58-320@2x.webp 2x, img/pictures/fr-flocked-sofa-h-58-320@3x.webp 3x" media="(max-width: 36em)" type="image/webp">
+                  <source srcset="img/pictures/fr-flocked-sofa-h-58-320.png, img/pictures/fr-flocked-sofa-h-58-320@2x.png 2x, img/pictures/fr-flocked-sofa-h-58-320@3x.png 3x" media="(max-width: 36em)">
+                  <source srcset="img/pictures/fr-flocked-sofa-h-58-1920.avif, img/pictures/fr-flocked-sofa-h-58-1920@2x.avif 2x, img/pictures/fr-flocked-sofa-h-58-1920@3x.avif 3x" type="image/avif">
+                  <source srcset="img/pictures/fr-flocked-sofa-h-58-1920.webp, img/pictures/fr-flocked-sofa-h-58-1920@2x.webp 2x, img/pictures/fr-flocked-sofa-h-58-1920@3x.webp 3x" type="image/webp">
+                  <img class="product-card__image" src="img/pictures/fr-flocked-sofa-h-58-1920.png" srcset="img/pictures/fr-flocked-sofa-h-58-1920@2x.png 2x, img/pictures/fr-flocked-sofa-h-58-1920@3x.png 3x" width="233" height="133" decoding="async" loading="lazy" alt="Диван флоковый H-58">
+                </picture>
+                <h2 class="title product-card__title title_size_m title_lh_m">
+                  Диван флоковый <span class="product-card__model-number">“H-58”</span>
+                </h2>
+                <span class="default-price product-card__default-price">
+                  23&nbsp;990 руб
+                </span>
+                <a class="button product-card__button button_stroke" href="#no-scrolling">
+                  Купить
+                </a>
+              </article>
+            </li>
+            <li class="product-card swiper-slide">
+              <article class="product-card__content">
+                <span class="product-rating product-card__product-rating">
+                  4,6
+                </span>
+                <picture class="product-card__picture">
+                  <source srcset="img/pictures/fr-leatherette-sofa-r-43-320.avif, img/pictures/fr-leatherette-sofa-r-43-320@2x.avif 2x, img/pictures/fr-leatherette-sofa-r-43-320@3x.avif 3x" media="(max-width: 36em)" type="image/avif">
+                  <source srcset="img/pictures/fr-leatherette-sofa-r-43-320.webp, img/pictures/fr-leatherette-sofa-r-43-320@2x.webp 2x, img/pictures/fr-leatherette-sofa-r-43-320@3x.webp 3x" media="(max-width: 36em)" type="image/webp">
+                  <source srcset="img/pictures/fr-leatherette-sofa-r-43-320.png, img/pictures/fr-leatherette-sofa-r-43-320@2x.png 2x, img/pictures/fr-leatherette-sofa-r-43-320@3x.png 3x" media="(max-width: 36em)">
+                  <source srcset="img/pictures/fr-leatherette-sofa-r-43-1920.avif, img/pictures/fr-leatherette-sofa-r-43-1920@2x.avif 2x, img/pictures/fr-leatherette-sofa-r-43-1920@3x.avif 3x" type="image/avif">
+                  <source srcset="img/pictures/fr-leatherette-sofa-r-43-1920.webp, img/pictures/fr-leatherette-sofa-r-43-1920@2x.webp 2x, img/pictures/fr-leatherette-sofa-r-43-1920@3x.webp 3x" type="image/webp">
+                  <img class="product-card__image" src="img/pictures/fr-leatherette-sofa-r-43-1920.png" srcset="img/pictures/fr-leatherette-sofa-r-43-1920@2x.png 2x, img/pictures/fr-leatherette-sofa-r-43-1920@3x.png 3x" width="271" height="105" decoding="async" loading="lazy" alt="Диван из кожзама R-43">
+                </picture>
+                <h2 class="title product-card__title product-card__title_size_min title_size_m title_lh_m">
+                  Диван из&nbsp;кожзама <span class="product-card__model-number">“R-43”</span>
+                </h2>
+                <span class="default-price product-card__default-price">
+                  33&nbsp;990 руб
+                </span>
+                <a class="button product-card__button button_stroke" href="#no-scrolling">
+                  Купить
+                </a>
+              </article>
+            </li>
+            <li class="product-card swiper-slide">
+              <article class="product-card__content">
+                <span class="product-rating product-card__product-rating">
+                  4,6
+                </span>
+                <picture class="product-card__picture">
+                  <source srcset="img/pictures/fr-shinil-sofa-c-42-320.avif, img/pictures/fr-shinil-sofa-c-42-320@2x.avif 2x, img/pictures/fr-shinil-sofa-c-42-320@3x.avif 3x" media="(max-width: 36em)" type="image/avif">
+                  <source srcset="img/pictures/fr-shinil-sofa-c-42-320.webp, img/pictures/fr-shinil-sofa-c-42-320@2x.webp 2x, img/pictures/fr-shinil-sofa-c-42-320@3x.webp 3x" media="(max-width: 36em)" type="image/webp">
+                  <source srcset="img/pictures/fr-shinil-sofa-c-42-320.png, img/pictures/fr-shinil-sofa-c-42-320@2x.png 2x, img/pictures/fr-shinil-sofa-c-42-320@3x.png 3x" media="(max-width: 36em)">
+                  <source srcset="img/pictures/fr-shinil-sofa-c-42-1920.avif, img/pictures/fr-shinil-sofa-c-42-1920@2x.avif 2x, img/pictures/fr-shinil-sofa-c-42-1920@3x.avif 3x" type="image/avif">
+                  <source srcset="img/pictures/fr-shinil-sofa-c-42-1920.webp, img/pictures/fr-shinil-sofa-c-42-1920@2x.webp 2x, img/pictures/fr-shinil-sofa-c-42-1920@3x.webp 3x" type="image/webp">
+                  <img class="product-card__image" src="img/pictures/fr-shinil-sofa-c-42-1920.png" srcset="img/pictures/fr-shinil-sofa-c-42-1920@2x.png 2x, img/pictures/fr-shinil-sofa-c-42-1920@3x.png 3x" width="229" height="127" decoding="async" loading="lazy" alt="Диван из шинила С-42">
+                </picture>
+                <h2 class="title product-card__title product-card__title_size_min title_size_m title_lh_m">
+                  Диван из&nbsp;шинила <span class="product-card__model-number">“С-42”</span>
+                </h2>
+                <span class="default-price product-card__default-price">
+                  18&nbsp;990 руб
+                </span>
+                <a class="button product-card__button button_stroke" href="#no-scrolling">
+                  Купить
+                </a>
+              </article>
+            </li>
+            <li class="product-card swiper-slide">
+              <article class="product-card__content">
+                <span class="product-rating product-card__product-rating">
+                  4,6
+                </span>
+                <picture class="product-card__picture">
+                  <source srcset="img/pictures/fr-velour-sofa-u-58-320.avif, img/pictures/fr-velour-sofa-u-58-320@2x.avif 2x, img/pictures/fr-velour-sofa-u-58-320@3x.avif 3x" media="(max-width: 36em)" type="image/avif">
+                  <source srcset="img/pictures/fr-velour-sofa-u-58-320.webp, img/pictures/fr-velour-sofa-u-58-320@2x.webp 2x, img/pictures/fr-velour-sofa-u-58-320@3x.webp 3x" media="(max-width: 36em)" type="image/webp">
+                  <source srcset="img/pictures/fr-velour-sofa-u-58-320.png, img/pictures/fr-velour-sofa-u-58-320@2x.png 2x, img/pictures/fr-velour-sofa-u-58-320@3x.png 3x" media="(max-width: 36em)">
+                  <source srcset="img/pictures/fr-velour-sofa-u-58-1920.avif, img/pictures/fr-velour-sofa-u-58-1920@2x.avif 2x, img/pictures/fr-velour-sofa-u-58-1920@3x.avif 3x" type="image/avif">
+                  <source srcset="img/pictures/fr-velour-sofa-u-58-1920.webp, img/pictures/fr-velour-sofa-u-58-1920@2x.webp 2x, img/pictures/fr-velour-sofa-u-58-1920@3x.webp 3x" type="image/webp">
+                  <img class="product-card__image" src="img/pictures/fr-velour-sofa-u-58-1920.png" srcset="img/pictures/fr-velour-sofa-u-58-1920@2x.png 2x, img/pictures/fr-velour-sofa-u-58-1920@3x.png 3x" width="269" height="92" decoding="async" loading="lazy" alt="Диван велюровый U-58">
+                </picture>
+                <h2 class="title product-card__title product-card__title_size_min title_size_m title_lh_m">
+                  Диван велюровый <span class="product-card__model-number">“U-58”</span>
+                </h2>
+                <span class="default-price product-card__default-price">
+                  21&nbsp;990 руб
+                </span>
+                <a class="button product-card__button button_stroke" href="#no-scrolling">
+                  Купить
+                </a>
+              </article>
+            </li>
+            <li class="product-card swiper-slide">
+              <article class="product-card__content">
+                <span class="product-rating product-card__product-rating">
+                  4,5
+                </span>
+                <picture class="product-card__picture">
+                  <source srcset="img/pictures/fr-flocked-sofa-f-41-320.avif, img/pictures/fr-flocked-sofa-f-41-320@2x.avif 2x, img/pictures/fr-flocked-sofa-f-41-320@3x.avif 3x" media="(max-width: 36em)" type="image/avif">
+                  <source srcset="img/pictures/fr-flocked-sofa-f-41-320.webp, img/pictures/fr-flocked-sofa-f-41-320@2x.webp 2x, img/pictures/fr-flocked-sofa-f-41-320@3x.webp 3x" media="(max-width: 36em)" type="image/webp">
+                  <source srcset="img/pictures/fr-flocked-sofa-f-41-320.png, img/pictures/fr-flocked-sofa-f-41-320@2x.png 2x, img/pictures/fr-flocked-sofa-f-41-320@3x.png 3x" media="(max-width: 36em)">
+                  <source srcset="img/pictures/fr-flocked-sofa-f-41-1920.avif, img/pictures/fr-flocked-sofa-f-41-1920@2x.avif 2x, img/pictures/fr-flocked-sofa-f-41-1920@3x.avif 3x" type="image/avif">
+                  <source srcset="img/pictures/fr-flocked-sofa-f-41-1920.webp, img/pictures/fr-flocked-sofa-f-41-1920@2x.webp 2x, img/pictures/fr-flocked-sofa-f-41-1920@3x.webp 3x" type="image/webp">
+                  <img class="product-card__image" src="img/pictures/fr-flocked-sofa-f-41-1920.png" srcset="img/pictures/fr-flocked-sofa-f-41-1920@2x.png 2x, img/pictures/fr-flocked-sofa-f-41-1920@3x.png 3x" width="263" height="106" decoding="async" loading="lazy" alt="Диван флоковый F-41">
+                </picture>
+                <h2 class="title product-card__title product-card__title_size_min title_size_m title_lh_m">
+                  Диван флоковый <span class="product-card__model-number">“F-41”</span>
+                </h2>
+                <span class="default-price product-card__default-price">
+                  17&nbsp;990 руб
+                </span>
+                <a class="button product-card__button button_stroke" href="#no-scrolling">
+                  Купить
+                </a>
+              </article>
+            </li>
+            <li class="product-card swiper-slide">
+              <article class="product-card__content">
+                <span class="product-rating product-card__product-rating">
+                  4,5
+                </span>
+                <picture class="product-card__picture">
+                  <source srcset="img/pictures/fr-velour-sofa-r-85-320.avif, img/pictures/fr-velour-sofa-r-85-320@2x.avif 2x, img/pictures/fr-velour-sofa-r-85-320@3x.avif 3x" media="(max-width: 36em)" type="image/avif">
+                  <source srcset="img/pictures/fr-velour-sofa-r-85-320.webp, img/pictures/fr-velour-sofa-r-85-320@2x.webp 2x, img/pictures/fr-velour-sofa-r-85-320@3x.webp 3x" media="(max-width: 36em)" type="image/webp">
+                  <source srcset="img/pictures/fr-velour-sofa-r-85-320.png, img/pictures/fr-velour-sofa-r-85-320@2x.png 2x, img/pictures/fr-velour-sofa-r-85-320@3x.png 3x" media="(max-width: 36em)">
+                  <source srcset="img/pictures/fr-velour-sofa-r-85-1920.avif, img/pictures/fr-velour-sofa-r-85-1920@2x.avif 2x, img/pictures/fr-velour-sofa-r-85-1920@3x.avif 3x" type="image/avif">
+                  <source srcset="img/pictures/fr-velour-sofa-r-85-1920.webp, img/pictures/fr-velour-sofa-r-85-1920@2x.webp 2x, img/pictures/fr-velour-sofa-r-85-1920@3x.webp 3x" type="image/webp">
+                  <img class="product-card__image" src="img/pictures/fr-velour-sofa-r-85-1920.png" srcset="img/pictures/fr-velour-sofa-r-85-1920@2x.png 2x, img/pictures/fr-velour-sofa-r-85-1920@3x.png 3x" width="251" height="105" decoding="async" loading="lazy" alt="Диван велюровый R-85">
+                </picture>
+                <h2 class="title product-card__title title_size_m title_lh_m">
+                  Диван велюровый <span class="product-card__model-number">“R-85”</span>
+                </h2>
+                <span class="default-price product-card__default-price">
+                  34&nbsp;990 руб
+                </span>
+                <a class="button product-card__button button_stroke" href="#no-scrolling">
+                  Купить
+                </a>
+              </article>
+            </li>
+            <li class="product-card swiper-slide">
+              <article class="product-card__content">
+                <span class="product-rating product-card__product-rating">
+                  4,5
+                </span>
+                <picture class="product-card__picture">
+                  <source srcset="img/pictures/fr-velour-sofa-s-44-320.avif, img/pictures/fr-velour-sofa-s-44-320@2x.avif 2x, img/pictures/fr-velour-sofa-s-44-320@3x.avif 3x" media="(max-width: 36em)" type="image/avif">
+                  <source srcset="img/pictures/fr-velour-sofa-s-44-320.webp, img/pictures/fr-velour-sofa-s-44-320@2x.webp 2x, img/pictures/fr-velour-sofa-s-44-320@3x.webp 3x" media="(max-width: 36em)" type="image/webp">
+                  <source srcset="img/pictures/fr-velour-sofa-s-44-320.png, img/pictures/fr-velour-sofa-s-44-320@2x.png 2x, img/pictures/fr-velour-sofa-s-44-320@3x.png 3x" media="(max-width: 36em)">
+                  <source srcset="img/pictures/fr-velour-sofa-s-44-1920.avif, img/pictures/fr-velour-sofa-s-44-1920@2x.avif 2x, img/pictures/fr-velour-sofa-s-44-1920@3x.avif 3x" type="image/avif">
+                  <source srcset="img/pictures/fr-velour-sofa-s-44-1920.webp, img/pictures/fr-velour-sofa-s-44-1920@2x.webp 2x, img/pictures/fr-velour-sofa-s-44-1920@3x.webp 3x" type="image/webp">
+                  <img class="product-card__image" src="img/pictures/fr-velour-sofa-s-44-1920.png" srcset="img/pictures/fr-velour-sofa-s-44-1920@2x.png 2x, img/pictures/fr-velour-sofa-s-44-1920@3x.png 3x" width="272" height="105" decoding="async" loading="lazy" alt="Диван велюровый S-44">
+                </picture>
+                <h2 class="title product-card__title product-card__title_size_min title_size_m title_lh_m">
+                  Диван велюровый <span class="product-card__model-number">“S-44”</span>
+                </h2>
+                <span class="default-price product-card__default-price">
+                  19&nbsp;990 руб
+                </span>
+                <a class="button product-card__button button_stroke" href="#no-scrolling">
+                  Купить
+                </a>
+              </article>
+            </li>
+            <li class="product-card swiper-slide">
+              <article class="product-card__content">
+                <span class="product-rating product-card__product-rating">
+                  4,4
+                </span>
+                <picture class="product-card__picture">
+                  <source srcset="img/pictures/fr-shinil-sofa-c-80-320.avif, img/pictures/fr-shinil-sofa-c-80-320@2x.avif 2x, img/pictures/fr-shinil-sofa-c-80-320@3x.avif 3x" media="(max-width: 36em)" type="image/avif">
+                  <source srcset="img/pictures/fr-shinil-sofa-c-80-320.webp, img/pictures/fr-shinil-sofa-c-80-320@2x.webp 2x, img/pictures/fr-shinil-sofa-c-80-320@3x.webp 3x" media="(max-width: 36em)" type="image/webp">
+                  <source srcset="img/pictures/fr-shinil-sofa-c-80-320.png, img/pictures/fr-shinil-sofa-c-80-320@2x.png 2x, img/pictures/fr-shinil-sofa-c-80-320@3x.png 3x" media="(max-width: 36em)">
+                  <source srcset="img/pictures/fr-shinil-sofa-c-80-1920.avif, img/pictures/fr-shinil-sofa-c-80-1920@2x.avif 2x, img/pictures/fr-shinil-sofa-c-80-1920@3x.avif 3x" type="image/avif">
+                  <source srcset="img/pictures/fr-shinil-sofa-c-80-1920.webp, img/pictures/fr-shinil-sofa-c-80-1920@2x.webp 2x, img/pictures/fr-shinil-sofa-c-80-1920@3x.webp 3x" type="image/webp">
+                  <img class="product-card__image" src="img/pictures/fr-shinil-sofa-c-80-1920.png" srcset="img/pictures/fr-shinil-sofa-c-80-1920@2x.png 2x, img/pictures/fr-shinil-sofa-c-80-1920@3x.png 3x" width="227" height="130" decoding="async" loading="lazy" alt="Диван из шинила С-80">
+                </picture>
+                <h2 class="title product-card__title product-card__title_size_min title_size_m title_lh_m">
+                  Диван из&nbsp;шинила <span class="product-card__model-number">“С-80”</span>
+                </h2>
+                <span class="default-price product-card__default-price">
+                  20&nbsp;990 руб
+                </span>
+                <a class="button product-card__button button_stroke" href="#no-scrolling">
+                  Купить
+                </a>
+              </article>
+            </li>
+          </ul>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

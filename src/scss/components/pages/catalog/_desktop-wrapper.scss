@@ -1,0 +1,43 @@
+.desktop-wrapper {
+  @include grid;
+
+  grid-template-columns: minmax(auto, 296px) repeat(9, 1fr);
+  grid-template-rows: auto;
+  gap: var(--first-gap);
+
+  @include bp-max-1070 {
+    display: block;
+  }
+
+  &__inner {
+    grid-column: span 9;
+    max-width: 100%;
+  }
+
+  &__title {
+    margin: 0 0 24px;
+
+    @include bp-max-1070 {
+      display: none;
+    }
+  }
+
+  &__box {
+    @include flex;
+
+    flex-direction: column;
+    padding-bottom: 65px;
+
+    @include bp-max-1070 {
+      display: none;
+    }
+  }
+
+  &__desktop-filters {
+    margin-bottom: auto;
+  }
+
+  &__oxford-card {
+    margin-top: 60px;
+  }
+}

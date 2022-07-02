@@ -1,0 +1,76 @@
+.catalog-section {
+  .swiper {
+    padding-bottom: 65px;
+
+    &-slide {
+      height: auto;
+    }
+
+    &-pagination {
+      @include f-jc-center;
+
+      bottom: 1px;
+      gap: var(--second-gap);
+
+      &-bullet {
+        @include f-i-center;
+
+        justify-content: center;
+        outline: none;
+        border: 2px solid var(--first-color-mode);
+        border-radius: var(--second-br);
+        width: 32px;
+        height: 32px;
+        font-weight: var(--first-font-weight);
+        font-size: var(--text-size-base);
+        line-height: 1;
+        color: var(--first-color-mode);
+        background-color: transparent;
+        opacity: 1;
+        transition-property: color, border-color, background-color;
+        transition-duration: var(--medium-transition-duration);
+        transition-timing-function: ease-in-out;
+
+        &-active {
+          border-color: var(--third-color-mode);
+          color: var(--seventh-other-color);
+          background-color: var(--third-color-mode);
+        }
+
+        &.focus-visible {
+          border-color: var(--first-color-mode);
+          color: var(--seventh-other-color);
+          background-color: var(--second-color-mode);
+        }
+
+        @include hover {
+          &:hover {
+            border-color: var(--first-color-mode);
+            color: var(--seventh-other-color);
+            background-color: var(--first-color-mode);
+          }
+        }
+
+        &:active {
+          border-color: var(--third-color-mode);
+          color: var(--seventh-other-color);
+          background-color: var(--third-color-mode);
+        }
+      }
+
+      .swiper-horizontal > &-bullets .swiper-pagination-bullet,
+      &-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0;
+      }
+    }
+  }
+
+  &__mobile-wrapper {
+    display: none;
+
+    @include bp-max-1070 {
+      display: block;
+      margin-bottom: 32px;
+    }
+  }
+}
