@@ -1,0 +1,38 @@
+<div class="dialog-window site-body__dialog-window" id="buy-product-dialog-window" role="dialog" tabindex="-1" aria-labelledby="buy-product-dialog-title" aria-modal="true" aria-hidden="true">
+  <div class="dialog-window__overlay" data-a11y-dialog-hide></div>
+  <div class="dialog-window__content buy-product" role="document">
+    <button class="dialog-window-close dialog-window__close" type="button" aria-label="Закрыть диалоговое окно" data-a11y-dialog-hide>
+      <span class="dialog-window-close__inner">
+        <svg class="dialog-window-close__icon" width="20" height="20" aria-hidden="true">
+          <use xlink:href="img/sprites/sprite.svg#icon-cross" />
+        </svg>
+      </span>
+    </button>
+    <h2 class="title buy-product__title title_size_l">
+      Купить в&nbsp;один клик
+    </h2>
+    <p class="buy-product__description">
+      Чтобы оформить заказ&nbsp;&mdash; заполните формы ниже и&nbsp;наш менеджер свяжется с&nbsp;вами в&nbsp;течении часа.
+    </p>
+    <form class="buy-product__form" name="buyProductForm" action="#" method="get">
+      <div class="buy-product__inner">
+        <input class="form-field js-name-field" type="text" name="buyProductFormNameField" placeholder="Как вас зовут?" translate="no" autocapitalize="on" autocorrect="false" autocomplete="name" spellcheck="false" enterkeyhint="next" aria-label="Введите ваше имя" required>
+      </div>
+      <div class="buy-product__inner">
+        <input class="form-field js-phone-field" type="tel" name="buyProductFormPhoneField" placeholder="Ваш телефон" translate="no" autocapitalize="off" autocorrect="false" autocomplete="tel" spellcheck="false" enterkeyhint="next" aria-label="Введите номер вашего телефона" required>
+      </div>
+      <button class="button buy-product__button button_fill" type="submit">
+        Отправить
+      </button>
+      <div class="form-custom-checkbox buy-product__custom-checkbox">
+        <input class="form-custom-checkbox__field" id="buy-product-checkbox-field" type="checkbox" name="buyProductFormUserAgreement" value="yes" checked required>
+        <label class="form-custom-checkbox__text" for="buy-product-checkbox-field">
+          Принимаю
+          <a class="form-custom-checkbox__link" href="#no-scrolling">
+            пользовательское соглашение
+          </a>
+        </label>
+      </div>
+    </form>
+  </div>
+</div>

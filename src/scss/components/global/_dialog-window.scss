@@ -45,6 +45,11 @@
     position: absolute;
     right: 20px;
     top: 20px;
+
+    @include bp-max-576 {
+      right: 16px;
+      top: 16px;
+    }
   }
 }
 

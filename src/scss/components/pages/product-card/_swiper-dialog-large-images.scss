@@ -1,0 +1,23 @@
+.swiper-dialog-large-images {
+  max-width: 100%;
+
+  &__wrapper {
+    align-items: center;
+  }
+
+  &__slide {
+    @include f-center;
+  }
+
+  &__picture {
+    font-size: 0;
+  }
+
+  &__image {
+    @include img-dereset;
+
+    @include bp-max-1070 {
+      width: auto;
+    }
+  }
+}

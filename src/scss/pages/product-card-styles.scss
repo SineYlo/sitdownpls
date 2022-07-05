@@ -40,8 +40,25 @@
 
 // |=============== CONNECTING THE COMPONENTS -> SMALL  | SITE MAIN ===============>
 @import "../components/global/breadcrumbs";
+@import "../components/global/title";
+@import "../components/global/product-rating";
+@import "../components/global/product-card";
+@import "../components/global/section-header";
+@import "../components/global/swiper-controls";
+@import "../components/global/default-price";
+@import "../components/global/form-field";
+@import "../components/global/form-custom-checkbox";
 
 // |=============== CONNECTING THE COMPONENTS -> COMMON | SITE MAIN ===============>
+@import "../components/pages/product-card/swiper-large-images";
+@import "../components/pages/product-card/swiper-small-images";
+@import "../components/pages/product-card/price-box";
+@import "../components/pages/product-card/product-feature";
+@import "../components/pages/product-card/product-characteristic";
+@import "../components/pages/product-card/product-information-section";
+@import "../components/pages/product-card/swiper-dialog-large-images";
+@import "../components/pages/product-card/swiper-dialog-small-images";
+@import "../components/pages/product-card/similar-products-section";
 @import "../components/base/site-main";
 
 // |=============== CONNECTING THE COMPONENTS -> SMALL  | SITE FOOTER ===============>
@@ -56,8 +73,14 @@
 @import "../components/global/dialog-window";
 @import "../components/global/dialog-window-close";
 
+// |=============== CONNECTING THE COMPONENTS -> COMMON | DIALOG WINDOW -> BUY PRODUCT ===============>
+@import "../components/global/buy-product";
+
 // |=============== CONNECTING THE COMPONENTS -> COMMON | DIALOG WINDOW -> DATA SENT ===============>
 @import "../components/global/data-sent";
+
+// |=============== CONNECTING THE COMPONENTS -> COMMON | DIALOG WINDOW -> ENLARGED IMAGES ===============>
+@import "../components/global/enlarged-images";
 
 // |=============== CONNECTING A GLOBAL MEDIA-QUERY THAT DISABLES ANIMATIONS AND EFFECTS ===============>
 @import "../media/global/query-reduced";

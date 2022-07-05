@@ -63,17 +63,25 @@
   </head>
   <body class="site-body site-page__site-body">
     <!--#========== CONNECTING THE PRELOADER ==========#-->
-    <!-- @include("html/components/global/_preloader.html") -->
+    @include("html/components/global/_preloader.html")
     <!--#========== CONNECTING THE SITE HEADER ==========#-->
     @include("html/components/pages/product-card/_site-header.html")
     <!--#========== CONNECTING THE SITE MAIN ==========#-->
     <main class="site-main site-main_indent">
       <!--#========== CONNECTING THE BREADCRUMBS ==========#-->
       @include("html/components/pages/product-card/_breadcrumbs.html")
-      <!--#========== CONNECTING THE SECTION |  ==========#-->
-      <!-- @include("html/components/pages") -->
+      <!--#========== CONNECTING THE SECTION | PRODUCT INFORMATION  ==========#-->
+      @include("html/components/pages/product-card/_product-information-section.html")
+      <!--#========== CONNECTING THE SECTION | SIMILAR PRODUCTS  ==========#-->
+      @include("html/components/pages/product-card/_similar-products-section.html")
     </main>
     <!--#========== CONNECTING THE SITE FOOTER ==========#-->
     @include("html/components/pages/product-card/_site-footer.html")
+    <!--#========== CONNECTING THE DIALOG WINDOW | DATA SENT ==========#-->
+    @include("html/components/global/_data-sent-dialog-window.html")
+    <!--#========== CONNECTING THE DIALOG WINDOW | BUY PRODUCT ==========#-->
+    @include("html/components/global/_buy-product-dialog-window.html")
+    <!--#========== CONNECTING THE DIALOG WINDOW | ENLARGED IMAGES ==========#-->
+    @include("html/components/global/_enlarged-images-dialog-window.html")
   </body>
 </html>

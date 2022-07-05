@@ -1,0 +1,29 @@
+.swiper-small-images {
+  width: 100%;
+  max-width: 100%;
+
+  .swiper {
+    &-wrapper {
+      align-items: center;
+    }
+
+    &-slide {
+      @include f-center;
+
+      cursor: pointer;
+    }
+  }
+
+  @include bp-max-992 {
+    height: 100%;
+  }
+
+  &__picture {
+    display: block;
+    font-size: 0;
+  }
+
+  &__image {
+    @include img-dereset;
+  }
+}

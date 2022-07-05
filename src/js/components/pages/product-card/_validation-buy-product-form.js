@@ -1,17 +1,18 @@
 /* eslint-disable no-console */
 import JustValidate from 'just-validate';
 import Inputmask from 'inputmask';
-import dataSentDialogWindow from '../global/_data-sent-dialog-window';
+import dataSentDialogWindow from '../../global/_data-sent-dialog-window';
+import buyProductDialogWindow from '../../global/_buy-product-dialog-window';
 
-const callbackForm = document.querySelector('.callback-form');
+const buyProductForm = document.querySelector('.buy-product__form');
 
-if (callbackForm) {
-  const phoneField = callbackForm.querySelector('.js-phone-field');
+if (buyProductForm) {
+  const phoneField = buyProductForm.querySelector('.js-phone-field');
 
   const fieldMask = new Inputmask('+7 (999) 999-99-99');
   fieldMask.mask(phoneField);
 
-  const validation = new JustValidate(callbackForm, {
+  const validation = new JustValidate(buyProductForm, {
     errorFieldCssClass: 'ui-invalid-field',
     successFieldCssClass: 'ui-valid-field',
 
@@ -56,16 +57,6 @@ if (callbackForm) {
         errorMessage: 'Не полностью введён номер телефона',
       },
     ])
-    .addField('.js-email-field', [
-      {
-        rule: 'required',
-        errorMessage: 'Это поле обязательное!',
-      },
-      {
-        rule: 'email',
-        errorMessage: 'Недопустимый формат',
-      },
-    ])
     .addField('.form-custom-checkbox__field', [
       {
         rule: 'required',
@@ -90,9 +81,11 @@ if (callbackForm) {
         field.classList.remove('ui-valid-field');
       });
 
+      buyProductDialogWindow.hide();
+
       dataSentDialogWindow.show();
 
-      xhr.open('POST', '../home-send-data.php', true);
+      xhr.open('POST', '../product-card-send-data.php', true);
       xhr.send(formData);
 
       e.target.reset();

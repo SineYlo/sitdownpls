@@ -21,7 +21,6 @@ if (specialOffersSection) {
       nextSlideMessage: 'Следующий слайд',
       firstSlideMessage: 'Это первый слайд',
       lastSlideMessage: 'Это последний слайд',
-      paginationBulletMessage: 'Перейти к слайду {{index}}',
     },
 
     breakpoints: {

@@ -1,0 +1,30 @@
+.swiper-large-images {
+  max-width: 100%;
+
+  .swiper-slide {
+    @include f-center;
+  }
+
+  &__button {
+    @include button-dereset;
+    @include flex;
+
+    flex-direction: column;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    transition: outline-color var(--medium-transition-duration) ease-in-out;
+    cursor: zoom-in;
+
+    &.focus-visible {
+      outline-color: var(--first-color-mode);
+    }
+  }
+
+  &__image {
+    @include img-dereset;
+
+    @include bp-max-1070 {
+      width: auto;
+    }
+  }
+}

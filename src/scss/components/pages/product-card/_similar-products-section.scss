@@ -1,0 +1,11 @@
+.similar-products-section {
+  .swiper-slide {
+    height: auto;
+  }
+
+  &__swiper {
+    @include bp-max-576 {
+      margin-bottom: 16px;
+    }
+  }
+}

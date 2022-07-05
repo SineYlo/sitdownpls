@@ -9,6 +9,14 @@
     margin-bottom: 23px;
   }
 
+  &_indent-product-card {
+    margin-bottom: 21px;
+
+    @include bp-max-1070 {
+      margin-bottom: 24px;
+    }
+  }
+
   &__container {
     @include f-ai-center;
 

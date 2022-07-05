@@ -1,17 +1,19 @@
 import Swiper from 'swiper/swiper-bundle';
-import { firstGap, thirdGap } from '../global/_gap';
+import { firstGap, secondGap } from '../../global/_gap';
 
-const usefulSection = document.querySelector('.useful-section');
+const similarProductsSection = document.querySelector('.similar-products-section');
 
-if (usefulSection) {
-  const swiperContainer = usefulSection.querySelector('.swiper');
+if (similarProductsSection) {
+  const swiperContainer = similarProductsSection.querySelector('.swiper');
 
   const swiper = new Swiper(swiperContainer, {
-    spaceBetween: thirdGap,
+    spaceBetween: secondGap,
+    slidesPerView: 2,
+    slidesPerGroup: 2,
 
     navigation: {
-      nextEl: '.useful-section .swiper-controls__button-next',
-      prevEl: '.useful-section .swiper-controls__button-prev',
+      nextEl: '.similar-products-section .swiper-controls__button-next',
+      prevEl: '.similar-products-section .swiper-controls__button-prev',
     },
 
     a11y: {
@@ -22,9 +24,9 @@ if (usefulSection) {
     },
 
     breakpoints: {
-      577: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
+      1071: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
         spaceBetween: firstGap,
       },
 
@@ -34,7 +36,7 @@ if (usefulSection) {
         spaceBetween: firstGap,
       },
 
-      1071: {
+      577: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         spaceBetween: firstGap,
