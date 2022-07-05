@@ -11,6 +11,12 @@
   &__picture {
     display: block;
     font-size: 0;
+
+    @include bp-max-576 {
+      @include f-ai-center;
+
+      height: 86px;
+    }
   }
 
   &__image {
