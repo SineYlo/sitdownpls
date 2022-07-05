@@ -17,6 +17,7 @@ const config = {
     root: [
       `${sourceFolder}/site.webmanifest`,
       `${sourceFolder}/favicon.svg`,
+      `${sourceFolder}/*.php`,
     ],
     html: `${sourceFolder}/*.html`,
     styles: [
