@@ -21,5 +21,3 @@ import '../components/global/_enlarged-images-dialog-window';
 import '../components/pages/product-card/_swiper-enlarged-images';
 // |=============== CONNECTING THE SCRIPT | PRELOADER ===============>
 import '../components/global/_preloader';
-// |=============== CONNECTING THE SCRIPT | OBSERVER ===============>
-import '../components/global/_observer';

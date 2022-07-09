@@ -1,4 +1,5 @@
 import Swiper from 'swiper/swiper-bundle';
+import checkingVisibilitySlides from '../global/_checking-visibility-slides';
 import { firstGap, thirdGap } from '../global/_gap';
 
 const specialOffersSection = document.querySelector('.special-offers-section');
@@ -10,6 +11,9 @@ if (specialOffersSection) {
     slidesPerView: 'auto',
     slidesPerGroup: 1,
     spaceBetween: thirdGap,
+    watchSlidesProgress: true,
+
+    slideVisibleClass: 'ui-slide-visible',
 
     navigation: {
       nextEl: '.special-offers-section .swiper-controls__button-next',
@@ -32,6 +36,16 @@ if (specialOffersSection) {
       993: {
         slidesPerGroup: 3,
         spaceBetween: firstGap,
+      },
+    },
+
+    on: {
+      init() {
+        checkingVisibilitySlides(this.slides, 'ui-slide-visible');
+      },
+
+      slideChange() {
+        checkingVisibilitySlides(this.slides, 'ui-slide-visible');
       },
     },
   });

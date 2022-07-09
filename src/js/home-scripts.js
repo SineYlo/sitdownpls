@@ -21,5 +21,3 @@ import './components/home/_tooltip-callback-section';
 import './components/home/_validation-callback-form';
 // |=============== CONNECTING THE SCRIPT | PRELOADER ===============>
 import './components/global/_preloader';
-// |=============== CONNECTING THE SCRIPT | OBSERVER ===============>
-import './components/global/_observer';

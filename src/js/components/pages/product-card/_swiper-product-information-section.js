@@ -1,4 +1,5 @@
 import Swiper from 'swiper/swiper-bundle';
+import checkingVisibilitySlides from '../../global/_checking-visibility-slides';
 
 const productInformationSection = document.querySelector('.product-information-section');
 
@@ -43,6 +44,10 @@ if (productInformationSection) {
   });
 
   const primarySwiper = new Swiper(swiperContainerLargeImages, {
+    watchSlidesProgress: true,
+
+    slideVisibleClass: 'ui-slide-visible',
+
     thumbs: {
       swiper: additionalSwiper,
     },
@@ -52,6 +57,16 @@ if (productInformationSection) {
       nextSlideMessage: 'Следующий слайд',
       firstSlideMessage: 'Это первый слайд',
       lastSlideMessage: 'Это последний слайд',
+    },
+
+    on: {
+      init() {
+        checkingVisibilitySlides(this.slides, 'ui-slide-visible');
+      },
+
+      slideChange() {
+        checkingVisibilitySlides(this.slides, 'ui-slide-visible');
+      },
     },
   });
 }

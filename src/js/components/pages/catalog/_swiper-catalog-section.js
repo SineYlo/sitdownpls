@@ -1,4 +1,5 @@
 import Swiper from 'swiper/swiper-bundle';
+import checkingVisibilitySlides from '../../global/_checking-visibility-slides';
 import { firstGap, secondGap } from '../../global/_gap';
 
 const catalogSection = document.querySelector('.catalog-section');
@@ -10,6 +11,9 @@ if (catalogSection) {
     spaceBetween: secondGap,
     slidesPerView: 2,
     slidesPerGroup: 2,
+    watchSlidesProgress: true,
+
+    slideVisibleClass: 'ui-slide-visible',
 
     grid: {
       fill: 'row',
@@ -61,6 +65,16 @@ if (catalogSection) {
           fill: 'row',
           rows: 3,
         },
+      },
+    },
+
+    on: {
+      init() {
+        checkingVisibilitySlides(this.slides, 'ui-slide-visible');
+      },
+
+      slideChange() {
+        checkingVisibilitySlides(this.slides, 'ui-slide-visible');
       },
     },
   });

@@ -1,5 +1,6 @@
 /* eslint-disable no-param-reassign */
 import Swiper from 'swiper/swiper-bundle';
+import checkingVisibilitySlides from '../global/_checking-visibility-slides';
 import { thirdGap } from '../global/_gap';
 
 const heroSection = document.querySelector('.hero-section');
@@ -14,6 +15,9 @@ if (heroSection) {
     loop: true,
     speed: swiperDelay,
     spaceBetween: thirdGap,
+    watchSlidesProgress: true,
+
+    slideVisibleClass: 'ui-slide-visible',
 
     pagination: {
       el: '.circular-pagination',
@@ -80,6 +84,8 @@ if (heroSection) {
           circleProgress.style.setProperty('--stroke-dashoffset', circleLength);
 
           document.documentElement.style.setProperty('--duration-filling', `${swiperDuration}ms`);
+
+          checkingVisibilitySlides(this.slides, 'ui-slide-visible');
         });
       },
     },
@@ -88,7 +94,7 @@ if (heroSection) {
   let isFirst = true;
 
   swiper.on('slideChange', (options) => {
-    const { pagination } = options;
+    const { pagination, slides } = options;
 
     if (isFirst) {
       pagination.bullets.forEach((bullet) => {
@@ -97,6 +103,8 @@ if (heroSection) {
 
       isFirst = false;
     }
+
+    checkingVisibilitySlides(slides, 'ui-slide-visible');
   });
 
   swiper.on('slideChangeTransitionEnd', (options) => {
