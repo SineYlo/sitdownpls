@@ -1,7 +1,6 @@
 /* eslint-disable no-param-reassign */
 import Swiper from 'swiper/swiper-bundle';
 import checkingVisibilitySlides from '../global/_checking-visibility-slides';
-import { thirdGap } from '../global/_gap';
 
 const heroSection = document.querySelector('.hero-section');
 
@@ -14,7 +13,7 @@ if (heroSection) {
   const swiper = new Swiper(swiperContainer, {
     loop: true,
     speed: swiperDelay,
-    spaceBetween: thirdGap,
+    spaceBetween: 12,
     watchSlidesProgress: true,
 
     slideVisibleClass: 'ui-slide-visible',

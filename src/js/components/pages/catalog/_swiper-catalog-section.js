@@ -1,6 +1,5 @@
 import Swiper from 'swiper/swiper-bundle';
 import checkingVisibilitySlides from '../../global/_checking-visibility-slides';
-import { firstGap, secondGap } from '../../global/_gap';
 
 const catalogSection = document.querySelector('.catalog-section');
 
@@ -8,7 +7,7 @@ if (catalogSection) {
   const swiperContainer = catalogSection.querySelector('.swiper');
 
   const swiper = new Swiper(swiperContainer, {
-    spaceBetween: secondGap,
+    spaceBetween: 16,
     slidesPerView: 2,
     slidesPerGroup: 2,
     watchSlidesProgress: true,
@@ -46,7 +45,7 @@ if (catalogSection) {
 
     breakpoints: {
       577: {
-        spaceBetween: firstGap,
+        spaceBetween: 32,
         slidesPerView: 2,
         slidesPerGroup: 2,
 
@@ -57,7 +56,7 @@ if (catalogSection) {
       },
 
       831: {
-        spaceBetween: firstGap,
+        spaceBetween: 32,
         slidesPerView: 3,
         slidesPerGroup: 3,
 

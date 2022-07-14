@@ -1,6 +1,5 @@
 import Swiper from 'swiper/swiper-bundle';
 import checkingVisibilitySlides from '../global/_checking-visibility-slides';
-import { firstGap, thirdGap } from '../global/_gap';
 
 const specialOffersSection = document.querySelector('.special-offers-section');
 
@@ -10,7 +9,7 @@ if (specialOffersSection) {
   const swiper = new Swiper(swiperContainer, {
     slidesPerView: 'auto',
     slidesPerGroup: 1,
-    spaceBetween: thirdGap,
+    spaceBetween: 12,
     watchSlidesProgress: true,
 
     slideVisibleClass: 'ui-slide-visible',
@@ -30,12 +29,12 @@ if (specialOffersSection) {
     breakpoints: {
       591: {
         slidesPerGroup: 2,
-        spaceBetween: firstGap,
+        spaceBetween: 32,
       },
 
       993: {
         slidesPerGroup: 3,
-        spaceBetween: firstGap,
+        spaceBetween: 32,
       },
     },
 

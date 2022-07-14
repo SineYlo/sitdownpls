@@ -1,6 +1,5 @@
 import Swiper from 'swiper/swiper-bundle';
 import checkingVisibilitySlides from '../global/_checking-visibility-slides';
-import { firstGap, thirdGap } from '../global/_gap';
 
 const usefulSection = document.querySelector('.useful-section');
 
@@ -8,7 +7,7 @@ if (usefulSection) {
   const swiperContainer = usefulSection.querySelector('.swiper');
 
   const swiper = new Swiper(swiperContainer, {
-    spaceBetween: thirdGap,
+    spaceBetween: 12,
     watchSlidesProgress: true,
 
     slideVisibleClass: 'ui-slide-visible',
@@ -29,19 +28,19 @@ if (usefulSection) {
       577: {
         slidesPerView: 2,
         slidesPerGroup: 2,
-        spaceBetween: firstGap,
+        spaceBetween: 32,
       },
 
       831: {
         slidesPerView: 3,
         slidesPerGroup: 3,
-        spaceBetween: firstGap,
+        spaceBetween: 32,
       },
 
       1071: {
         slidesPerView: 2,
         slidesPerGroup: 2,
-        spaceBetween: firstGap,
+        spaceBetween: 32,
       },
     },
 

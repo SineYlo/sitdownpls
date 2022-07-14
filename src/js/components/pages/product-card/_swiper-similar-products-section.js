@@ -1,6 +1,5 @@
 import Swiper from 'swiper/swiper-bundle';
 import checkingVisibilitySlides from '../../global/_checking-visibility-slides';
-import { firstGap, secondGap } from '../../global/_gap';
 
 const similarProductsSection = document.querySelector('.similar-products-section');
 
@@ -8,7 +7,7 @@ if (similarProductsSection) {
   const swiperContainer = similarProductsSection.querySelector('.swiper');
 
   const swiper = new Swiper(swiperContainer, {
-    spaceBetween: secondGap,
+    spaceBetween: 16,
     slidesPerView: 2,
     slidesPerGroup: 2,
     watchSlidesProgress: true,
@@ -31,19 +30,19 @@ if (similarProductsSection) {
       1071: {
         slidesPerView: 4,
         slidesPerGroup: 4,
-        spaceBetween: firstGap,
+        spaceBetween: 32,
       },
 
       831: {
         slidesPerView: 3,
         slidesPerGroup: 3,
-        spaceBetween: firstGap,
+        spaceBetween: 32,
       },
 
       577: {
         slidesPerView: 2,
         slidesPerGroup: 2,
-        spaceBetween: firstGap,
+        spaceBetween: 32,
       },
     },
 
