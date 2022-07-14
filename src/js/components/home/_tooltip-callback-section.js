@@ -16,7 +16,7 @@ if (callbackSection) {
     animation: 'perspective',
 
     arrow: `
-      <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="tippy-icon" width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip-1)">
           <path d="M8.49993 7.97056L16.9852 -0.514725H0.0146484L8.49993 7.97056Z" fill="#333333"/>
         </g>

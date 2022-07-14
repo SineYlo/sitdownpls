@@ -52,3 +52,5 @@ const primarySwiper = new Swiper(swiperDialogLargeImages, {
     lastSlideMessage: 'Это последний слайд',
   },
 });
+
+export default primarySwiper;

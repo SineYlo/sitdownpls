@@ -96,5 +96,6 @@ if (callbackForm) {
       xhr.send(formData);
 
       e.target.reset();
+      validation.refresh();
     });
 }

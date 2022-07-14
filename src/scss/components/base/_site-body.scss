@@ -1,6 +1,8 @@
 // stylelint-disable order/order
 // stylelint-disable selector-pseudo-class-no-unknown
 .site-body {
+  --scroll-size: 12px;
+
   @include margin-dereset;
 
   min-width: 320px;
@@ -9,21 +11,21 @@
   color: var(--twelfth-other-color);
 
   &::-webkit-scrollbar {
-    width: 12px;
+    width: var(--scroll-size);
 
     &:horizontal {
-      height: 12px;
+      height: var(--scroll-size);
     }
   }
 
   &::-webkit-scrollbar-track,
   &::-webkit-scrollbar-corner {
-    background-color: var(--ninth-other-color);
+    background-color: transparent;
   }
 
   &::-webkit-scrollbar-thumb {
     border-radius: var(--second-br);
-    background-color: var(--first-color-mode);
+    background-color: transparent;
   }
 
   @include pointer {
@@ -34,5 +36,16 @@
   &__dialog-window {
     position: fixed;
     inset: 0;
+  }
+
+  &.ui-scroll-visible {
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-corner {
+      background-color: var(--ninth-other-color);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--first-color-mode);
+    }
   }
 }

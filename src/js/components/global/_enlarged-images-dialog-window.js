@@ -1,5 +1,6 @@
 import A11yDialog from 'a11y-dialog';
 import { createFocusTrap } from 'focus-trap';
+import primarySwiper from '../pages/product-card/_swiper-enlarged-images';
 import toggleTwoClasses from './_toggle-two-classes';
 
 const swiperLargeImagesButton = document.querySelectorAll('.swiper-large-images__button');
@@ -38,8 +39,14 @@ enlargedImagesDialogWindow.on('hide', () => {
   focusTrap.deactivate();
 });
 
-[...swiperLargeImagesButton].forEach((button) => {
-  button.addEventListener('click', () => {
+[...swiperLargeImagesButton].forEach((button, index) => {
+  button.setAttribute('data-index', index);
+
+  button.addEventListener('click', (e) => {
+    const idx = e.currentTarget.dataset.index;
+
+    primarySwiper.slideTo(idx);
+
     enlargedImagesDialogWindow.show();
   });
 });

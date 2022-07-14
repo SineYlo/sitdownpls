@@ -92,16 +92,19 @@
         transition: opacity var(--medium-transition-duration) ease-in-out;
 
         .choices__list {
+          display: flex;
+          flex-direction: column;
           padding: 14px;
           max-height: 140px;
+          gap: 11px;
         }
 
         .choices__item {
           padding: 0;
           line-height: lh-numeric(14px, 18px);
 
-          &:not(:last-child) {
-            margin-bottom: 11px;
+          &.is-selected {
+            display: none;
           }
 
           &.is-highlighted {

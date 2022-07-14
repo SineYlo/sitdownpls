@@ -27,6 +27,7 @@
     transition-property: outline-color, color;
     transition-duration: var(--medium-transition-duration);
     transition-timing-function: ease-in-out;
+    user-select: none;
 
     &::before {
       content: "";

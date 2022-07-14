@@ -24,8 +24,9 @@
     min-height: 250px;
   }
 
-  &__description {
+  &__title {
     margin: 0 0 auto;
+    font-weight: inherit;
     font-size: var(--text-size-large);
     line-height: lh-numeric(24px, 33px);
 

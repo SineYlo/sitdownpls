@@ -68,6 +68,16 @@
 
   .tippy-box {
     border-radius: 0;
+
+    &[data-placement="bottom"] {
+      .tippy-svg-arrow {
+        top: -8px;
+      }
+
+      .tippy-icon {
+        transform: rotateX(180deg);
+      }
+    }
   }
 
   .tippy-content {

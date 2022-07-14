@@ -25,6 +25,7 @@
     font-size: var(--text-size-small);
     line-height: lh-numeric(14px, 20px);
     transition: outline-color var(--medium-transition-duration) ease-in-out;
+    user-select: none;
 
     &::before {
       content: "";

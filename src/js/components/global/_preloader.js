@@ -13,6 +13,7 @@ addFillGapTarget(preloader);
 window.addEventListener('load', () => {
   window.setTimeout(() => {
     siteBody.classList.add('ui-preloader-hidden');
+    siteBody.classList.add('ui-scroll-visible');
     enablePageScroll(preloader);
   }, 1500);
 
